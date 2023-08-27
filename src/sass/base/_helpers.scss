@@ -6,3 +6,10 @@
 // Font Weights
 @include fontWeights();
 @include LineHeights();
+
+.color-white{
+  color: var(--white);
+}
+.color-black{
+  color:var(--black);
+}

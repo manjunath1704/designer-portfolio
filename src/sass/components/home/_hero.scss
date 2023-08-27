@@ -1,0 +1,29 @@
+#{$app}- {
+  &hero {
+    &__ {
+      &title {
+        font-size: 80px;
+        &- {
+          &outlined {
+            color: white;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #000000;
+            font-weight: 800;
+            margin-top: -70px;
+            &-- {
+              &lg {
+                font-size: 220px;
+              }
+              &md {
+                font-size: 180px;
+              }
+              &sm {
+                font-size: 70px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

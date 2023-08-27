@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 const Header = () => {
   return (
     <Container>
-      <nav className="d-flex justify-content-between align-items-center py-4">
+      <nav className="d-flex justify-content-between align-items-center py-5">
         <a href="/home" className="sid-btn__normal customFontOneBold fs-bold">Contact</a>
         <div style={{ height: "auto", width: "130px" }}>
           <img

@@ -1,0 +1,15 @@
+#{$app}- {
+  &projects {
+    background-color: #0e0e0e;
+    &__ {
+      &titleA {
+        font-size: 200px;
+      }
+      &titleB {
+        font-size: 300px;
+        margin-left: -16%;
+        margin-top: -4%;
+      }
+    }
+  }
+}

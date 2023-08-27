@@ -1,0 +1,35 @@
+#{$app}- {
+  &card {
+    cursor: url("../../../../public/assets/shapes/cursor-white.svg"),
+      auto;
+
+    &:hover .sid-card__wrap {
+      &::before {
+        background-color: rgba(0, 0, 0, 0.375);
+      }
+    }
+    &__ {
+
+      &wrap {
+        height: 550px;
+        overflow: hidden;
+        &::before {
+          border-radius: 20px;
+          content: "";
+          background-color: rgba(0, 0, 0, 0);
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          transition: background-color 0.5s ease-out;
+        }
+      }
+      &thumbnail {
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
