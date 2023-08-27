@@ -1,0 +1,59 @@
+* {
+  &,
+  &:before,
+  &:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--body-font);
+}
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-bottom: inherit;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  display: inline-block;
+  transition: all 0.2s ease;
+
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+  svg {
+    fill: currentColor;
+  }
+}
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}

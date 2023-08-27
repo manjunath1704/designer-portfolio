@@ -2,7 +2,7 @@
 /* customFontOne : Start */
 @font-face{
   font-family: 'customFontOneRegular';
-  src: local('customFontOneRegular'),url('../public/assets/fonts/f1/n1/62d82a490fc2f600387f4056.otf')
+  src: local('customFontOneRegular'),url('../../fonts/f1/n1/62d82a490fc2f600387f4056.otf')
 }
 .customFontOneRegular{
   font-family: customFontOneRegular;
@@ -10,7 +10,7 @@
 
 @font-face{
   font-family: 'customFontOneSemibold';
-  src: local('customFontOneSemibold'),url('../public/assets/fonts/f1/n4/62d82a490fc2f600387f4056.otf')
+  src: local('customFontOneSemibold'),url('../../fonts/f1/n4/62d82a490fc2f600387f4056.otf')
 }
 .customFontOneSemibold{
   font-family: customFontOneSemibold;
@@ -18,7 +18,7 @@
 
 @font-face{
   font-family: 'customFontOneBold';
-  src: local('customFontOneBold'),url('../public/assets/fonts/f1/n5/62d82a490fc2f600387f4056.otf')
+  src: local('customFontOneBold'),url('../../fonts/f1/n5/62d82a490fc2f600387f4056.otf')
 }
 .customFontOneBold{
   font-family: customFontOneSemibold;
@@ -28,7 +28,7 @@
 /* customFontTwo : Start */
 @font-face{
   font-family: 'customFontTwo';
-  src: local('customFontTwo'),url('../public/assets/fonts/f2/63e12eaf2f52870024111fe7.otf')
+  src: local('customFontTwo'),url('../../fonts/f2/63e12eaf2f52870024111fe7.otf')
 }
 .customFontTwo{
   font-family: customFontTwo;
@@ -39,7 +39,7 @@
 /* customFontThree : Start */
 @font-face{
   font-family: 'customFontThree';
-  src: local('customFontThree'),url('../public/assets/fonts/f3/63e12ed3f62e78001a0e026c.ttf')
+  src: local('customFontThree'),url('../../fonts/f3/63e12ed3f62e78001a0e026c.ttf')
 }
 .customFontThree{
   font-family: customFontThree;
@@ -49,16 +49,9 @@
 /* customFontFour : Start */
 @font-face{
   font-family: 'customFontFour';
-  src: local('customFontFour'),url('../public/assets/fonts/f4/63e171962f528700241833f4.otf')
+  src: local('customFontFour'),url('../../fonts/f4/63e171962f528700241833f4.otf')
 }
 .customFontFour{
   font-family: customFontFour;
 }
 /* customFontFour : End */
-
-/* colors */
-:root{
-  --orange:#ff7a01;
-  --black:#000000;
-  --white:#ffffff;
-}
