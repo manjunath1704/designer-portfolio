@@ -12,7 +12,7 @@ const servicesData = [
   },
   {
     ServicesTitle:"Graphic Design",
-    servicesDescription:"Création graphique de tous types d'éléments, en passant par vos supports de communication à une simple création d'icônes.",
+    servicesDescription:"Création graphique de tous types d'éléments, en passant par vos supports de communication à une simple création.",
     servicesDescription2:"Renforcer votre présence digitale. Améliorer votre communication."
   }
 ]
@@ -39,9 +39,9 @@ const Services = () => {
               <Col xs={12} sm={6} md={4} key={index}>
               <article>
               <h6 className="text-4xl color-white customFontOneBold font-bold mb-5">{data.ServicesTitle}</h6>
-              <p className="text-xl color-white customFontOneBold font-bold mb-0">{data.servicesDescription}</p>
+              <p className="text-xl color-white customFontOneBold mb-0">{data.servicesDescription}</p>
               <h6 className="text-3xl color-white customFontOneBold font-bold my-4"> Objectif</h6>
-              <p className="text-xl color-white customFontOneBold font-bold mb-0">{data.servicesDescription2}</p>
+              <p className="text-xl color-white customFontOneBold mb-0">{data.servicesDescription2}</p>
               </article>
             </Col>
             )
