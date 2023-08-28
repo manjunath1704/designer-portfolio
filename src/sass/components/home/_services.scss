@@ -1,8 +1,16 @@
 #{$app}- {
   &services {
     background-color: var(--green);
+    padding: 100px 0;
     &__ {
-      &title {
+      &titleA {
+        font-size: 100px;
+      }
+      &titleB {
+        font-size: 250px;
+        margin-left: -5%;
+        margin-top: -4%;
+        opacity: 0.3;
       }
     }
   }

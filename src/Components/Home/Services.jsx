@@ -22,11 +22,11 @@ const Services = () => {
       <Container>
         <Row>
           <Col xs={12}>
-            <h5 className="d-flex align-items-center justify-content-center">
-              <div className="customFontThree sid-projects__titleA color-white">
+            <h5 className="d-flex align-items-center">
+              <div className="customFontThree sid-services__titleA color-white">
                 SERVICES
               </div>
-              <div className="customFontFour sid-projects__titleB color-white font-bold">
+              <div className="customFontFour sid-services__titleB color-white font-bold">
                 Services
               </div>
             </h5>
