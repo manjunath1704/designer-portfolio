@@ -1,4 +1,6 @@
+import React  from 'react';
 import { Container } from "react-bootstrap";
+const logoDark = "./assets/logo/logo-dark.webp"
 const Header = () => {
   return (
     <Container>
@@ -6,7 +8,7 @@ const Header = () => {
         <a href="/home" className="sid-btn__normal customFontOneBold fs-bold">Contact</a>
         <div style={{ height: "auto", width: "130px" }}>
           <img
-            src="./assets/logo/image-6bd9f599-1d26-494e-91d8-833963e9da75.webp"
+            src={logoDark} 
             alt=""
             className="img-fluid"
           />

@@ -1,3 +1,4 @@
+import React  from 'react';
 const Card = ({ projectTitle, projectThumbnail, projectLink, titleColor }) => {
   return (
     <a className="sid-card__link position-relative" href={projectLink}>

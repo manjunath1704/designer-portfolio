@@ -1,3 +1,4 @@
+import React  from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
 const projectData = [
@@ -40,7 +41,7 @@ const projectData = [
 ];
 const UiUXDesign = () => {
   return (
-    <section className="sid-UiUxDesign">
+    <section className="sid-UiUxDesign overflow-hidden">
       <Container>
         <Row className="mb-8">
           <Col xs={12}>

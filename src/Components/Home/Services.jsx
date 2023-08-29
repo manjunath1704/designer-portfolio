@@ -1,3 +1,4 @@
+import React  from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 const servicesData = [
   {
@@ -18,7 +19,7 @@ const servicesData = [
 ]
 const Services = () => {
   return (
-    <section className="sid-services">
+    <section className="sid-services overflow-hidden">
       <Container>
         <Row>
           <Col xs={12}>

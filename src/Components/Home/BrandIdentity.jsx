@@ -1,3 +1,4 @@
+import React  from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
 const projectData = [
@@ -40,15 +41,15 @@ const projectData = [
 ];
 const BrandIdentity = () => {
   return (
-    <section className="sid-projects">
+    <section className="sid-brand overflow-hidden">
       <Container>
         <Row className="mb-8">
           <Col xs={12}>
             <h5 className="d-flex align-items-center justify-content-center">
-              <div className="customFontThree sid-projects__titleA color-white">
+              <div className="customFontThree sid-brand__titleA color-white">
                 BRAND
               </div>
-              <div className="customFontFour sid-projects__titleB color-white">
+              <div className="customFontFour sid-brand__titleB color-white">
                 Identity
               </div>
             </h5>

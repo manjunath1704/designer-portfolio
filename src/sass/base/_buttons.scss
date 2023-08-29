@@ -29,3 +29,22 @@
 .sid-btn__filled:hover {
   background-color: var(--orange);
 }
+.sid-button__neon{
+  background-color: var(--white);
+  border-radius: 45px;
+  color: var(--black);
+  font-size: 25px;
+  padding: 15px 35px;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  -webkit-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+.sid-button__neon:hover{
+  background-color:var(--yellow);
+  color:var(--white)
+}
