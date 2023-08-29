@@ -15,11 +15,11 @@ const Projects = () => {
               spaceBetween={50}
               slidesPerView={1}
               pagination={{ clickable: true }}
+              className="sid-projects__slider"
             >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
+              <SwiperSlide>
+                <div className="sid-projects__slider"></div>
+              </SwiperSlide>
             </Swiper>
           </Col>
         </Row>
