@@ -18,7 +18,14 @@ const Projects = () => {
               className="sid-projects__slider"
             >
               <SwiperSlide>
-                <div className="sid-projects__slider"></div>
+                <div className="sid-projects__slider">
+                  Hello
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="sid-projects__slider">
+                Hi
+                </div>
               </SwiperSlide>
             </Swiper>
           </Col>
