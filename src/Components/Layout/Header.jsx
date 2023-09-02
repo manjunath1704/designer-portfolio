@@ -1,7 +1,18 @@
 import React  from 'react';
+import { useState } from "react";
 import { Container } from "react-bootstrap";
+import PopUp from '../Global/PopUp';
 const logoDark = "./assets/logo/logo-dark.webp"
 const Header = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <Container>
       <nav className="d-flex justify-content-between align-items-center py-5">
@@ -15,6 +26,10 @@ const Header = () => {
         </div>
         <a href="/home" className="sid-btn__filled customFontOneBold">Mail</a>
       </nav>
+      <button onClick={openPopup}>Open Popup</button>
+      <PopUp isOpen={isPopupOpen} onClose={closePopup} >
+        <h1 className='color-white text-2xl font-semibold'>Hello i am pop up</h1>
+      </PopUp>
     </Container>
   );
 };
