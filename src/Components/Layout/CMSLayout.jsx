@@ -7,7 +7,7 @@ import { Row,Col } from "react-bootstrap";
 const CMSLayout = (props) => {
   return (
     <main>
-      <Row className="vh-100  d-flex align-items-center justify-content-center ubantu-font">
+      <Row className="vh-100  d-flex align-items-center justify-content-center ubantu-font overflow-hidden">
         <Col xs={2} className="h-100 position-relative h-100">
         <CMSSidebar />
         </Col>

@@ -65,7 +65,7 @@ function CMSSidebar() {
 
   return (
       <Sidebar
-        className={`app h-100 ubantu-font w-100 border-35 bg-danger m-1 ${toggled ? "toggled" : ""}`}
+        className={`app h-100 ubantu-font w-100 border-35 bg-danger m-1 overflow-hidden ${toggled ? "toggled" : ""}`}
       >
         <main>
           <Menu>
