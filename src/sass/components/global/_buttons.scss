@@ -1,0 +1,33 @@
+#{$app}- {
+  &button {
+    &__ {
+      &success {
+        border: 2px solid var(--green) ;
+        background-color: var(--green) !important;
+        padding: 10px 45px;
+        border-radius: 35px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+      &danger{
+        background-color: var(--red) !important;
+        padding: 10px 45px;
+        border-radius: 35px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        border: 2px solid var(--red) ;
+      }
+      &outlined{
+        border: 2px solid var(--red) ;
+        padding: 10px 45px;
+        border-radius: 35px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+      &login {
+        border: 2px solid var(--cms-app-color) ;
+        background-color: var(--cms-app-color) !important;
+        padding: 10px 45px;
+        border-radius: 35px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      }
+    }
+  }
+}

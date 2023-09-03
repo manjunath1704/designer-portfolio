@@ -1,7 +1,9 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
-import { Parallax } from 'react-scroll-parallax';
+import db from "../../firebase";
+import { collection, onSnapshot } from "firebase/firestore";
 const projectData = [
   {
     projectTitle: "GRAPHIC DESIGN, LOGO —  GoToGo",
@@ -41,7 +43,18 @@ const projectData = [
   },
 ];
 const UiUXDesign = () => {
+  // const [projects, setProjects] = useState([]);
+  // useEffect(
+  //   () =>
+  //     onSnapshot(collection(db, "uiux-projects"), (snapshot) => {
+  //       setProjects(snapshot.docs.map((doc) => ({...doc.data(), id:doc.id})));
+  //     }),
+  //   []
+  // );
+  // console.log(projects, "projects");
   return (
+    <>
+    
     <section className="sid-UiUxDesign overflow-hidden position-relative">
       <div className="sid-UiUxDesign__shape">
         <svg
@@ -86,6 +99,18 @@ const UiUXDesign = () => {
         </Row>
       </Container>
     </section>
+    {/* <Row className="g-4">
+          {projects.map((data) => {
+            return (
+              <Col xs={12} sm={6} lg={4} key={data.id} className="bg-danger me-4">
+                <h4>{data.projectLink}</h4>
+                <h4>{data.projectName}</h4>
+                <h4>{data.thumbnail}</h4>
+              </Col>
+            );
+          })}
+        </Row> */}
+    </>
   );
 };
 export default UiUXDesign;

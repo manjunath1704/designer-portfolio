@@ -21,6 +21,15 @@ const PopUp = ({ isOpen, onClose, children }) => {
     };
   }, [isOpen]);
 
+  // close button
+  const initialScale = 1;
+  const hoverScale = 1.2;
+
+  const hoverTransition = {
+    type: "spring", // Use spring animation for a bouncy effect
+    stiffness: 200, // Adjust stiffness for the spring animation
+    damping: 20, // Adjust damping for the spring animation
+  };
   return (
     <AnimatePresence>
       {isOpen && (
@@ -32,17 +41,28 @@ const PopUp = ({ isOpen, onClose, children }) => {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="sid-popUp__container p-8"
+            className="sid-popUp__container p-8 position-relative"
             variants={popupVariants}
             initial="hidden"
             animate="visible"
             exit="hidden"
             onClick={(e) => e.stopPropagation()} // Prevent clicks inside the modal from closing it
           >
-            <div className="text-end">
-            <button onClick={onClose}>Close</button>
-            </div>
-           {children}
+            <motion.button
+              onClick={onClose}
+              whileHover={{ scale: hoverScale }} // Scale to 120% on hover
+              whileTap={{ scale: initialScale }} // Reset to the initial size on click (optional)
+              initial={{ scale: initialScale }} // Initial size
+              transition={hoverTransition}
+              className="sid-popUp__button p-2 d-flex align-items-center justify-content-center position-absolute end-0"
+            >
+              <img
+                src="./assets/icons/icon-close.svg"
+                alt=""
+                className="img-fluid"
+              />
+            </motion.button>
+            {children}
           </motion.div>
         </motion.div>
       )}

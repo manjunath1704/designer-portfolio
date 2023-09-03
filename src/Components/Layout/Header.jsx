@@ -28,7 +28,7 @@ const Header = () => {
       </nav>
       <button onClick={openPopup}>Open Popup</button>
       <PopUp isOpen={isPopupOpen} onClose={closePopup} >
-        <h1 className='color-white text-2xl font-semibold'>Hello i am pop up</h1>
+      <h5 className='text-4xl font-bold color-white'> Log in to continue</h5>
       </PopUp>
     </Container>
   );
