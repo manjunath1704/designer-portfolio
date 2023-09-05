@@ -36,11 +36,11 @@ const SlideImage = ({ backgroundImage, projectLink }) => {
   return (
     <a href={projectLink} className="d-block">
       <div className="sid-projects__slide">
-      <img
-              src={backgroundImage}
-              alt=""
-              className="sid-projects__image w-100 h-100 d-block"
-            />
+        <img
+          src={backgroundImage}
+          alt=""
+          className="sid-projects__image w-100 h-100 d-block"
+        />
       </div>
     </a>
   );
@@ -48,15 +48,18 @@ const SlideImage = ({ backgroundImage, projectLink }) => {
 const Projects = () => {
   return (
     <section className="sid-projects">
-      <Container>
-        <Row>
-          <Col xs={12}>
+      <Container className="sid-projects__wrapper">
+        <h5 className="color-black text-8xl text-center mb-10">
+          My most recent projects
+        </h5>
+        <Row className="justify-content-center">
+          <Col xs={11}>
             <Swiper
               modules={[Autoplay, Pagination, EffectCoverflow]}
               spaceBetween={0}
               slidesPerView={1}
               pagination={{ clickable: true }}
-              className="sid-projects__slider"
+              className="sid-projects__slider pb-18"
               loop={true}
               autoplay={{
                 delay: 3500,

@@ -3,11 +3,7 @@ const Card = ({ projectTitle, projectThumbnail, projectLink, titleColor }) => {
   return (
     <a className="sid-card__link position-relative" href={projectLink}>
       <article className="sid-card position-relative">
-        <header>
-          <h4 className={`text-xl  customFontOneBold mb-5 font-bold ${titleColor}`}>
-            {projectTitle}
-          </h4>
-        </header>
+       
         <figure className="sid-card__wrap overflow-hidden position-relative">
           <img
             className="sid-card__thumbnail h-100 w-100"
@@ -15,6 +11,11 @@ const Card = ({ projectTitle, projectThumbnail, projectLink, titleColor }) => {
             alt={projectTitle}
           />
         </figure>
+        <footer>
+          <h4 className={`text-xl  customFontOneBold mt-2 font-bold ${titleColor}`}>
+            {projectTitle}
+          </h4>
+        </footer>
       </article>
     </a>
   );

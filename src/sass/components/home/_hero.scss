@@ -1,5 +1,7 @@
 #{$app}- {
   &hero {
+    background-color: var(--black);
+    height: 70vh;
     &__ {
       &title {
         font-size: 80px;

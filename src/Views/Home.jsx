@@ -1,8 +1,8 @@
-import BrandIdentity from "../Components/Home/BrandIdentity";
 import Hero from "../Components/Home/Hero";
+import MarketingStuff from "../Components/Home/MarketingStuff";
 import Projects from "../Components/Home/Projects";
 import Services from "../Components/Home/Services";
-import UiUXDesign from "../Components/Home/UiUxDesign";
+import UiUxProjects from "../Components/Home/UiUxProjects";
 import Layout from "../Components/Layout/Layout";
 
 const Home = () => {
@@ -10,8 +10,8 @@ const Home = () => {
     <Layout>
       <Hero />
       <Projects />
-      <BrandIdentity />
-      <UiUXDesign />
+      <UiUxProjects />
+      <MarketingStuff />
       <Services />
     </Layout>
   );

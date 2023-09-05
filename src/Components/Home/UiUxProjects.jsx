@@ -39,7 +39,7 @@ const projectData = [
     projectLink: "www.google.com",
   },
 ];
-const BrandIdentity = () => {
+const UiUxProjects = () => {
   return (
     < >
     <section className="sid-brand position-relative overflow-hidden">
@@ -51,13 +51,8 @@ const BrandIdentity = () => {
       <Container>
         <Row className="mb-8 position-relative z-5">
           <Col xs={12}>
-            <h5 className="d-flex align-items-center justify-content-center">
-              <div className="customFontThree sid-brand__titleA color-white">
-                BRAND
-              </div>
-              <div className="customFontFour sid-brand__titleB color-white">
-                Identity
-              </div>
+          <h5 className="color-white text-8xl text-center mb-5">
+                UI UX Design Projects
             </h5>
           </Col>
         </Row>
@@ -80,4 +75,4 @@ const BrandIdentity = () => {
     </>
   );
 };
-export default BrandIdentity;
+export default UiUxProjects;

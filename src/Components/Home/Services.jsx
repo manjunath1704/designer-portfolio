@@ -23,13 +23,8 @@ const Services = () => {
       <Container>
         <Row>
           <Col xs={12}>
-            <h5 className="d-flex align-items-center">
-              <div className="customFontThree sid-services__titleA color-white">
-                SERVICES
-              </div>
-              <div className="customFontFour sid-services__titleB color-white font-bold">
-                Services
-              </div>
+            <h5 className="color-white text-8xl mb-5">
+            My process involves
             </h5>
           </Col>
         </Row>
