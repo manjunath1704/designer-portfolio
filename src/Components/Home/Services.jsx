@@ -2,42 +2,42 @@ import React  from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 const servicesData = [
   {
-    ServicesTitle:"UI/UX Design",
-    servicesDescription:"Création d'interfaces UI/UX modernes, originales et ingénieuses en maximisant l'expérience utilisateur.",
-    servicesDescription2:"Faire la différence. Vous démarquez de la concurrence et atteindre vos objectifs."
+    ServicesTitle:"Research and Discovery",
+    servicesDescription:"Understanding brand, target audience, & project goals to create a solid foundation for design decisions",
   },
   {
-    ServicesTitle:"Identité de marque",
-    servicesDescription:"Amélioration ou création de votre identité visuelle complète. Refonte ou construction de votre logo professionnel.",
-    servicesDescription2:"Valoriser votre marque. Mieux vous positionner sur le marché.Attirer et augmenter votre clientèle."
+    ServicesTitle:"Wireframing and Prototyping",
+    servicesDescription:"Developing low-fidelity wireframes and interactive prototypes to visualize the user flow and structure of the project",
   },
   {
-    ServicesTitle:"Graphic Design",
-    servicesDescription:"Création graphique de tous types d'éléments, en passant par vos supports de communication à une simple création.",
-    servicesDescription2:"Renforcer votre présence digitale. Améliorer votre communication."
+    ServicesTitle:"UI Design",
+    servicesDescription:"Crafting visually appealing and consistent user interfaces that align with your brand identity while focusing on usability",
+  }
+  ,
+  {
+    ServicesTitle:"Final Deliverables",
+    servicesDescription:"Providing you with high-fidelity designs, design specifications, and assets ready for development.",
   }
 ]
 const Services = () => {
   return (
-    <section className="sid-services overflow-hidden">
+    <section className="sid-section sid-services overflow-hidden">
       <Container>
         <Row>
           <Col xs={12}>
-            <h5 className="color-white text-8xl mb-5">
+            <h5 className="color-white text-4xl text-lg-8xl sid-font__head mb-5">
             My process involves
             </h5>
           </Col>
         </Row>
-        <Row className="g-4">
+        <Row className="g-5">
           {
            servicesData.map((data,index)=>{
             return(
-              <Col xs={12} sm={6} md={4} key={index}>
+              <Col xs={12} sm={6} key={index}>
               <article>
-              <h6 className="text-4xl color-white customFontOneBold font-bold mb-5">{data.ServicesTitle}</h6>
-              <p className="text-xl color-white customFontOneBold mb-0">{data.servicesDescription}</p>
-              <h6 className="text-3xl color-white customFontOneBold font-bold my-4"> Objectif</h6>
-              <p className="text-xl color-white customFontOneBold mb-0">{data.servicesDescription2}</p>
+              <h6 className="text-4xl color-white sid-font__body font-bold mb-5">{data.ServicesTitle}</h6>
+              <p className="text-xl color-white sid-font__body mb-0">{data.servicesDescription}</p>
               </article>
             </Col>
             )

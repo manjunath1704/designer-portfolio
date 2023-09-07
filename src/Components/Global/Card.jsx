@@ -12,7 +12,7 @@ const Card = ({ projectTitle, projectThumbnail, projectLink, titleColor }) => {
           />
         </figure>
         <footer>
-          <h4 className={`text-xl  customFontOneBold mt-2 font-bold ${titleColor}`}>
+          <h4 className={`text-lg sid-font__body mt-2 ${titleColor}`}>
             {projectTitle}
           </h4>
         </footer>

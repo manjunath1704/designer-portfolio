@@ -54,7 +54,7 @@
   }
 }
 
-#{$app}- {
+#{$app}-{
   &font {
     &__ {
       &head {
@@ -69,3 +69,10 @@
     }
   }
 }
+
+// section spacings
+// #{$app}-{
+//   &section{
+//     padding: 75px;
+//   }
+// }

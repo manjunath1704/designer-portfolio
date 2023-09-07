@@ -47,9 +47,9 @@ const SlideImage = ({ backgroundImage, projectLink }) => {
 };
 const Projects = () => {
   return (
-    <section className="sid-projects">
+    <section className="sid-section sid-projects">
       <Container className="sid-projects__wrapper">
-        <h5 className="color-black text-8xl text-center mb-10">
+        <h5 className="color-black text-4xl text-lg-8xl sid-font__head text-center mb-10">
           My most recent projects
         </h5>
         <Row className="justify-content-center">

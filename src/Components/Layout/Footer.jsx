@@ -26,10 +26,10 @@ const Footer = () => {
       </div>
       <div className="sid-footer__bottom">
         <Container>
-          <Row className="g-4">
+          <Row className="g-4 text-center">
            <Col>
-           <p>Siddhi Parkar </p>
-           <ul className="d-flex mt-6 ">
+           <h4 className='sid-font__name text-4xl font-light color-white my-4'>Siddhi Parkar</h4>
+           <ul className="d-flex justify-content-center mt-8">
                 {dataSocial.map((data, index) => {
                   return (
                     <li key={index} className="me-5">

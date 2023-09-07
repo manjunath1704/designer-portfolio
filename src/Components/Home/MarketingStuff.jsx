@@ -6,41 +6,17 @@ import db from "../../firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 const projectData = [
   {
-    projectTitle: "GRAPHIC DESIGN, LOGO —  GoToGo",
+    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:
       "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-04a659f4-3ba4-40c6-9b27-c52c7f6617a1.png?w=885&e=webp&nll=true",
     projectLink: "www.google.com",
   },
   {
-    projectTitle: "GRAPHIC DESIGN, LOGO —  GoToGo",
+    projectTitle: "WEB INTERFACE DESIGN & BRAND IDENTITY — Mes Travaux Économiques",
     projectThumbnail:
       "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-32269c02-b7bf-4096-a1f0-e78762eaf55b.png?w=885&e=webp&nll=true&cX=0.6238447319777833&cY=0&cW=1693.7523105360444&cH=2208 2x, https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-32269c02-b7bf-4096-a1f0-e78762eaf55b.png?w=1328&e=webp&nll=true&cX=0.6238447319777833&cY=0&cW=1693.7523105360444&cH=2208",
     projectLink: "www.google.com",
-  },
-  {
-    projectTitle: "GRAPHIC DESIGN, LOGO —  GoToGo",
-    projectThumbnail:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-04a659f4-3ba4-40c6-9b27-c52c7f6617a1.png?w=885&e=webp&nll=true",
-    projectLink: "www.google.com",
-  },
-  {
-    projectTitle: "GRAPHIC DESIGN, LOGO —  GoToGo",
-    projectThumbnail:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-04a659f4-3ba4-40c6-9b27-c52c7f6617a1.png?w=885&e=webp&nll=true",
-    projectLink: "www.google.com",
-  },
-  {
-    projectTitle: "GRAPHIC DESIGN, LOGO —  GoToGo",
-    projectThumbnail:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-32269c02-b7bf-4096-a1f0-e78762eaf55b.png?w=885&e=webp&nll=true&cX=0.6238447319777833&cY=0&cW=1693.7523105360444&cH=2208 2x, https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-32269c02-b7bf-4096-a1f0-e78762eaf55b.png?w=1328&e=webp&nll=true&cX=0.6238447319777833&cY=0&cW=1693.7523105360444&cH=2208",
-    projectLink: "www.google.com",
-  },
-  {
-    projectTitle: "GRAPHIC DESIGN, LOGO —  GoToGo",
-    projectThumbnail:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-04a659f4-3ba4-40c6-9b27-c52c7f6617a1.png?w=885&e=webp&nll=true",
-    projectLink: "www.google.com",
-  },
+  }
 ];
 const MarketingStuff = () => {
   // const [projects, setProjects] = useState([]);
@@ -55,8 +31,8 @@ const MarketingStuff = () => {
   return (
     <>
     
-    <section className="sid-UiUxDesign overflow-hidden position-relative">
-      <div className="sid-UiUxDesign__shape">
+    <section className="sid-section sid-marketingStuff overflow-hidden position-relative">
+      <div className="sid-marketingStuff__shape">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-30 0.9927821159362793 1337 2867.00732421875"
@@ -73,7 +49,7 @@ const MarketingStuff = () => {
       <Container>
         <Row className="mb-8 position-relative z-5">
           <Col xs={12}>
-            <h5 className="color-black text-8xl text-center mb-5">
+            <h5 className="color-black text-4xl text-lg-8xl sid-font__head text-center mb-5">
             Emailers and Social media Marketing
             </h5>
           </Col>
