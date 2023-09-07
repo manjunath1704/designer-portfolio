@@ -7,10 +7,10 @@ const Hero = () => {
       <Container>
         <Row>
           <Col xs={12} className="text-center color-white">
-           <h6>Hello there, I am</h6>
+           {/* <h6>Hello there, I am</h6>
            <h4>Siddhi Parkar</h4>
            <p>UI UX Designer</p>
-           <p>Freelancer based in Mumbai, India</p>
+           <p>Freelancer based in Mumbai, India</p> */}
           </Col>
         </Row>
       </Container>
