@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import PopUp from "../Global/PopUp";
+import SocialMedia from "../Global/SocialMedia";
 const logoDark = "./assets/logo/logo-dark.webp";
 const Header = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -17,15 +18,7 @@ const Header = () => {
     <nav className="position-fixed w-100 top-0 sid-navbar">
       <Container>
         <div className="d-flex justify-content-between align-items-center py-5">
-          <a href="/home" className="sid-btn__normal customFontOneBold fs-bold">
-            Contact
-          </a>
-          <div style={{ height: "auto", width: "130px" }}>
-            <img src={logoDark} alt="" className="img-fluid" />
-          </div>
-          <a href="/home" className="sid-btn__filled customFontOneBold">
-            Mail
-          </a>
+          <SocialMedia/>
         </div>
         {/* <button onClick={openPopup}>Open Popup</button>
         <PopUp isOpen={isPopupOpen} onClose={closePopup}>

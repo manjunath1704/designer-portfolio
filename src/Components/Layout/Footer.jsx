@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import React from "react";
+import SocialMedia from "../Global/SocialMedia";
 const logoLight = "./assets/logo/logo-light.webp";
 
 const dataSocial = [
@@ -29,22 +30,7 @@ const Footer = () => {
           <Row className="g-4 text-center">
            <Col>
            <h4 className='sid-font__name text-4xl font-light color-white my-4'>Siddhi Parkar</h4>
-           <ul className="d-flex justify-content-center mt-8">
-                {dataSocial.map((data, index) => {
-                  return (
-                    <li key={index} className="me-5">
-                      <a href={data.link}>
-                        <img
-                          src={data.icon}
-                          alt={data.name}
-                          className="img-fluid"
-                          style={{ height: "40px", width: "40px" }}
-                        />
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
+           <SocialMedia iconSize="40px"/>
            </Col>
           </Row>
         </Container>
