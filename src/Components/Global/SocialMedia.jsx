@@ -1,16 +1,16 @@
 import {BiLogoBehance, BiLogoLinkedin} from 'react-icons/bi/'
 const dataSocial = [
-  { name: "Behance", link: "#", icon: <BiLogoBehance/>,iconSize:"text-8xl" },
-  { name: "LinkedIN", link: "#", icon:  <BiLogoLinkedin/>,iconSize:"text-6xl"},
+  { name: "Behance", link: "#", icon: <BiLogoBehance/> },
+  { name: "LinkedIN", link: "#", icon:  <BiLogoLinkedin/>},
 ];
 
-const SocialMedia = () => {
+const SocialMedia = ({iconSize}) => {
   return (
-    <ul className="d-flex justify-content-center align-items-center mt-8">
+    <ul className="d-flex justify-content-center align-items-center">
       {dataSocial.map((data, index) => {
         return (
           <li key={index} className="me-2">
-            <a href={data.link} className={`${data.iconSize} color-white`}>
+            <a href={data.link} className={`${iconSize} color-white`}>
              {data.icon}
             </a>
           </li>

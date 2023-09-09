@@ -57,4 +57,9 @@ a {
 html {
   scroll-behavior: smooth;
 }
-
+.swiper-pagination-bullet{
+  background:rgba(174, 210, 255, 0.90)
+}
+.swiper-pagination-bullet-active{
+  background:#AED3FF!important;
+}
