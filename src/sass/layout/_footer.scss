@@ -4,16 +4,29 @@
       &top {
         background-color: var(--yellow);
         padding: 100px 0;
+        @media(max-width:998px){
+          padding: 50px 0;
+        }
       }
       &bottom {
         background-color: var(--black);
         padding: 100px 0;
+        @media(max-width:998px){
+          padding: 50px 0;
+        }
       }
-      &title {
-        font-size: 200px;
-      }
-      &tag {
-        letter-spacing: 20px;
+
+      &cbutton{
+        height: 100px;
+        width: 100px;
+        @media(max-width:998px){
+          height: 70px;
+        width: 70px;
+        }
+        @media(max-width:568px){
+          height: 55px;
+          width: 55px;
+        }
       }
     }
   }

@@ -6,6 +6,10 @@
         background-color: var(--blueA);
         padding-top: 100px;
         padding-bottom: 150px;
+        @media(max-width:998px){
+          padding-top: 50px;
+          padding-bottom: 75px;
+        }
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
       }

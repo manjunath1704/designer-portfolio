@@ -1,6 +1,9 @@
 #{$app}- {
   &marketingStuff {
     padding: 150px 0;
+    @media(max-width:998px){
+      padding: 75px 0;
+    }
     margin-top: -5%;
     &__ {
       &shape {
@@ -8,6 +11,15 @@
         height: 100%;
         position: absolute;
         top:0;
+        &::before{
+          content: "";
+          position: absolute;
+          background-color: var(--blueA);
+          top: 15%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
       }
     }
   }

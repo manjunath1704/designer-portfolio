@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
+import AnimatingElement from "../Global/AppearingAnimation";
 const projectData = [
   {
     projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
@@ -38,7 +39,7 @@ const projectData = [
 ];
 const UiUxProjects = () => {
   return (
-    <>
+    <AnimatingElement>
       <section className="sid-section sid-UiUxProjects position-relative overflow-hidden">
         <div className="sid-UiUxProjects__shape">
           <svg
@@ -57,9 +58,11 @@ const UiUxProjects = () => {
         <Container>
           <Row className="mb-8 position-relative z-5">
             <Col xs={12}>
+              
               <h5 className="color-white text-4xl text-lg-8xl sid-font__head text-center mb-5">
                 UI UX Design Projects
               </h5>
+              
             </Col>
           </Row>
           <Row className="g-4">
@@ -78,7 +81,7 @@ const UiUxProjects = () => {
           </Row>
         </Container>
       </section>
-    </>
+      </AnimatingElement>
   );
 };
 export default UiUxProjects;

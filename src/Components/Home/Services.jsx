@@ -1,5 +1,6 @@
 import React  from 'react';
 import { Col, Container, Row } from "react-bootstrap";
+import AnimatingElement from '../Global/AppearingAnimation';
 const servicesData = [
   {
     ServicesTitle:"Research and Discovery",
@@ -21,7 +22,9 @@ const servicesData = [
 ]
 const Services = () => {
   return (
+    <AnimatingElement>
     <section className="sid-section sid-services overflow-hidden">
+    
       <Container>
         <Row>
           <Col xs={12}>
@@ -30,14 +33,14 @@ const Services = () => {
             </h5>
           </Col>
         </Row>
-        <Row className="g-5">
+        <Row className="g-4 g-lg-5">
           {
            servicesData.map((data,index)=>{
             return(
               <Col xs={12} sm={6} key={index}>
               <article>
-              <h6 className="text-4xl color-white sid-font__body font-bold mb-5">{data.ServicesTitle}</h6>
-              <p className="text-xl color-white sid-font__body mb-0">{data.servicesDescription}</p>
+              <h6 className="text-2xl text-lg-4xl color-white sid-font__body font-bold mb-2 mb-lg-5">{data.ServicesTitle}</h6>
+              <p className="text-md text-lg-xl color-white sid-font__body mb-0">{data.servicesDescription}</p>
               </article>
             </Col>
             )
@@ -47,6 +50,7 @@ const Services = () => {
       </Container>
      
     </section>
+    </AnimatingElement>
   );
 };
 export default Services;

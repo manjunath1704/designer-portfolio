@@ -5,6 +5,7 @@ import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import AnimatingElement from "../Global/AppearingAnimation";
 
 const projectsData = [
   {
@@ -47,6 +48,7 @@ const SlideImage = ({ backgroundImage, projectLink }) => {
 };
 const Projects = () => {
   return (
+    <AnimatingElement>
     <section className="sid-section sid-projects">
       <Container className="sid-projects__wrapper">
         <h5 className="color-black text-4xl text-lg-8xl sid-font__head text-center mb-10">
@@ -81,6 +83,7 @@ const Projects = () => {
         </Row>
       </Container>
     </section>
+    </AnimatingElement>
   );
 };
 export default Projects;

@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
 import db from "../../firebase";
 import { collection, onSnapshot } from "firebase/firestore";
+import AnimatingElement from "../Global/AppearingAnimation";
 const projectData = [
   {
     projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
@@ -30,7 +31,7 @@ const MarketingStuff = () => {
   // console.log(projects, "projects");
   return (
     <>
-    
+    <AnimatingElement>
     <section className="sid-section sid-marketingStuff overflow-hidden position-relative">
       <div className="sid-marketingStuff__shape">
         <svg
@@ -81,6 +82,7 @@ const MarketingStuff = () => {
             );
           })}
         </Row> */}
+        </AnimatingElement>
     </>
   );
 };
