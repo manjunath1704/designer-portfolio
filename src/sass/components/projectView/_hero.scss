@@ -2,6 +2,9 @@
   &pvHero {
     background-color: var(--white);
     height: 72vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     &__ {
     }
   }

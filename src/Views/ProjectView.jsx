@@ -1,11 +1,15 @@
 import Layout from "../Components/Layout/Layout";
 import Hero from "../Components/ProjectView/Hero";
-
+const backgroundImage ="./assets/unnamed.jpg";
 const ProjectView = () => {
-  return(
+  return (
     <Layout>
-      <Hero/>
+      <Hero
+        heroTitle="Customizing Material"
+        heroDesc="Customization creates unique branded products with familiar patterns and accessible interactions"
+        backgroundImage={backgroundImage}
+      />
     </Layout>
-  )
-}
+  );
+};
 export default ProjectView;

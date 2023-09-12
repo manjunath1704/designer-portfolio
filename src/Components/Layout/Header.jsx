@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import PopUp from "../Global/PopUp";
 import SocialMedia from "../Global/SocialMedia";
+import { Link } from "react-router-dom";
 const logoDark = "./assets/logo/logo-dark.webp";
 const Header = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -47,10 +48,10 @@ const Header = () => {
       <Container>
 
         <div className="d-flex justify-content-between align-items-center">
-          <div className="logo py-3">
+          <Link to="/"><div className="logo py-3">
             <h1 className="sid-font__head text-md text-lg-lg text-uppercase color-white border-bottom-lightblue pb-1 mb-1">Siddhi Parkar</h1>
             <p className="sid-font__body text-xxs text-lg-xs text-uppercase color-white text-center">UI/UX Designer</p>
-          </div>
+          </div></Link>
           <SocialMedia iconSize="text-4xl" />
         </div>
 
