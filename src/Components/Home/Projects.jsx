@@ -5,7 +5,8 @@ import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import AnimatingElement from "../Global/AppearingAnimation";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const projectsData = [
   {
@@ -47,9 +48,19 @@ const SlideImage = ({ backgroundImage, projectLink }) => {
   );
 };
 const Projects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+
   return (
-    <AnimatingElement>
-    <section className="sid-section sid-projects">
+ 
+    <motion.section className="sid-section sid-projects" ref={ref}
+    style={{
+      transform: isInView ? "none" : "translateY(200px)",
+      opacity: isInView ? 1 : 1,
+      transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
+    }}
+    >
       <Container className="sid-projects__wrapper">
         <h5 className="color-black text-4xl text-lg-8xl sid-font__head text-center mb-10">
           My most recent projects
@@ -82,8 +93,8 @@ const Projects = () => {
           </Col>
         </Row>
       </Container>
-    </section>
-    </AnimatingElement>
+    </motion.section>
+
   );
 };
 export default Projects;

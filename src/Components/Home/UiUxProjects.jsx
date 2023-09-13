@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
-import AnimatingElement from "../Global/AppearingAnimation";
+
 const projectData = [
   {
     projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
@@ -39,7 +39,7 @@ const projectData = [
 ];
 const UiUxProjects = () => {
   return (
-    <AnimatingElement>
+   
       <section className="sid-section sid-UiUxProjects position-relative overflow-hidden">
         <div className="sid-UiUxProjects__shape">
           <svg
@@ -51,7 +51,7 @@ const UiUxProjects = () => {
           >
             <path
               d="M187.925 5.86567L-3.5 31.5V3770.5L1287.5 3831.5L1302 31.5L1121.38 46.609C1067.02 51.1565 1012.29 44.7187 960.47 27.679C891.42 4.97521 817.547 1.19486 746.541 16.7315L697.023 27.5663C618.877 44.6652 538.013 45.1827 459.655 29.0852L378.95 12.5058C316.098 -0.406028 251.522 -2.65073 187.925 5.86567Z"
-              fill="#0E0E0E"
+              fill="#000000"
             ></path>
           </svg>
         </div>
@@ -69,19 +69,21 @@ const UiUxProjects = () => {
             {projectData.map((data, index) => {
               return (
                 <Col xs={12} sm={6} lg={4} key={index}>
+                  
                   <Card
                     titleColor="color-white"
                     projectThumbnail={data.projectThumbnail}
                     projectTitle={data.projectTitle}
                     projectLink={data.projectLink}
+                    delay={0.6 * index}
                   />
+                 
                 </Col>
               );
             })}
           </Row>
         </Container>
       </section>
-      </AnimatingElement>
   );
 };
 export default UiUxProjects;
