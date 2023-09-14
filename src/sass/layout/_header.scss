@@ -2,4 +2,14 @@
   &navbar {
     background-color: var(--black);
     z-index: 99999;
-  }}
+    &__{
+      &logo{
+        width: 75px;
+        @media(min-width:768px){
+          width: 100px;
+        }
+      }
+    }
+  }
+ 
+}

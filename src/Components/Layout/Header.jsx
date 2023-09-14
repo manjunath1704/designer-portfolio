@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 import PopUp from "../Global/PopUp";
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
-const logoDark = "./assets/logo/logo-dark.webp";
+const logoDark = "./assets/logo/sid-logo-blue.svg";
 const Header = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const openPopup = () => {
@@ -46,12 +46,20 @@ const Header = () => {
       className="position-fixed w-100 top-0 sid-navbar"
     >
       <Container>
-
         <div className="d-flex justify-content-between align-items-center">
-          <Link to="/"><div className="logo py-3">
-            <h1 className="sid-font__head text-md text-lg-lg text-uppercase color-white border-bottom-lightblue pb-1 mb-1">Siddhi Parkar</h1>
-            <p className="sid-font__body text-xxs text-lg-xs text-uppercase color-white text-center">UI/UX Designer</p>
-          </div></Link>
+          <div className="sid-navbar__logo position-relative">
+            <img
+              src={logoDark}
+              alt="logo"
+              className="img-fluid"
+            />
+            <Link
+              to="/"
+              className="position-absolute top-0 start-0 end-0 bottom-0"
+            >
+              {" "}
+            </Link>
+          </div>
           <SocialMedia iconSize="text-4xl" />
         </div>
 
