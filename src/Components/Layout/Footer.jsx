@@ -1,8 +1,9 @@
 import React from "react";
 import { useRef } from "react";
-import { useInView, motion } from "framer-motion";
+import { useInView, motion, } from "framer-motion";
 import { Container, Row, Col } from "react-bootstrap";
 import { BsArrowRight } from "react-icons/bs";
+import {IoIosDocument} from "react-icons/io"
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
 const logoDark = "./assets/logo/sid-logo-blue.svg";
@@ -12,6 +13,8 @@ const Footer = () => {
   const footerBottom = useRef(null);
   const isInViewFooterTop = useInView(footerTop, { once: true });
   const isInViewFooterBottom = useInView(footerBottom, { once: true });
+
+
   return (
     <footer className="sid-footer">
       <div className="sid-footer__top" ref={footerTop}>
@@ -30,7 +33,7 @@ const Footer = () => {
                     LET'S CONNECT
                   </h5>
                   <a
-                    href="#"
+                    href="ksadksjdsdjk"
                     className="ms-4 ms-lg-5 rounded-circle bg-light d-flex justify-content-center align-items-center sid-footer__cbutton"
                   >
                     <BsArrowRight className="" />
@@ -81,6 +84,11 @@ const Footer = () => {
           </Row>
         </Container>
       </div>
+      {/* <motion.div  whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}
+      className="sid-footer__resume d-flex align-items-center justify-content-center">
+       <IoIosDocument className="text-8xl color-white"/>
+      </motion.div> */}
+      
     </footer>
   );
 };

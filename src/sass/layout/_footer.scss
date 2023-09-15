@@ -4,28 +4,43 @@
       &top {
         background-color: var(--yellow);
         padding: 100px 0;
-        @media(max-width:998px){
+        @media (max-width: 998px) {
           padding: 50px 0;
         }
       }
       &bottom {
         background-color: var(--black);
         padding: 100px 0;
-        @media(max-width:998px){
+        @media (max-width: 998px) {
           padding: 50px 0;
         }
       }
-&logo{
-  width: 150px;
-}
-      &cbutton{
+      &logo {
+        width: 150px;
+      }
+      &resume {
+        background-color: var(--lightblue);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        // background-color: rgba(17, 25, 40, 0.75);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        z-index: 999;
+        cursor: pointer;
+      }
+      &cbutton {
         height: 100px;
         width: 100px;
-        @media(max-width:998px){
+        @media (max-width: 998px) {
           height: 70px;
-        width: 70px;
+          width: 70px;
         }
-        @media(max-width:568px){
+        @media (max-width: 568px) {
           height: 55px;
           width: 55px;
         }
