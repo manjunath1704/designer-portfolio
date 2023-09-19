@@ -1,19 +1,15 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore"
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBGJtO6kW94AfN1rQJE8ncXiuDuz7M9E2A",
-  authDomain: "designer-portfolio-637ad.firebaseapp.com",
-  projectId: "designer-portfolio-637ad",
-  storageBucket: "designer-portfolio-637ad.appspot.com",
-  messagingSenderId: "499346662909",
-  appId: "1:499346662909:web:0a9546740ecb04765d2594"
+  apiKey: "AIzaSyANTE0PGj__Cwj3yiuFYtlPn0WjlMaqSKY",
+  authDomain: "siddhi-parkar.firebaseapp.com",
+  projectId: "siddhi-parkar",
+  storageBucket: "siddhi-parkar.appspot.com",
+  messagingSenderId: "943695250412",
+  appId: "1:943695250412:web:2850a999c8e98ded80f6c9",
+  measurementId: "G-KEEXQW3GYY"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export default getFirestore();
