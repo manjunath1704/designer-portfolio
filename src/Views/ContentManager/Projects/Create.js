@@ -142,16 +142,23 @@ function CreateProject() {
        
       </div>
       <div>
-       <div className="d-flex flex-wrap">
+       <div className="d-flex flex-wrap mt-4">
        {images.map((image, index) => (
           <div key={index} className="image-preview overflow-hidden position-relative me-2 mb-2">
-            <img src={image} thumbnail className="image-preview__img w-100 h-100" />
-            <button
+            <motion.img initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={animationVariants} src={image} thumbnail className="image-preview__img w-100 h-100" />
+            <motion.button
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={animationVariants}
               onClick={() => handleDeleteImage(index)}
               className="position-absolute  close-button bg-transparent"
             >
                <XCircleFill className="text-danger text-xl"/>
-            </button>
+            </motion.button>
           </div>
         ))}
        </div>
