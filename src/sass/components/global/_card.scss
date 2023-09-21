@@ -5,7 +5,7 @@
 
     &:hover .sid-card__wrap {
       &::before {
-        background-color: rgba(0, 0, 0, 0.375);
+        // background-color: rgba(0, 0, 0, 0.375);
       }
     }
     &__ {
@@ -13,6 +13,7 @@
       &wrap {
         height: 550px;
         overflow: hidden;
+        border-radius: 20px;
         &::before {
           border-radius: 20px;
           content: "";

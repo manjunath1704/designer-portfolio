@@ -63,7 +63,7 @@ const Header = () => {
           <SocialMedia iconSize="text-4xl" />
         </div>
 
-        <button onClick={openPopup}>Open Popup</button>
+        {/* <button onClick={openPopup}>Open Popup</button> */}
         <PopUp isOpen={isPopupOpen} onClose={closePopup}>
           <h5 className="text-4xl font-bold color-white">
             {" "}

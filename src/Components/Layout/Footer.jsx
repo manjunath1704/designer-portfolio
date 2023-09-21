@@ -2,8 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { useInView, motion, } from "framer-motion";
 import { Container, Row, Col } from "react-bootstrap";
-import { BsArrowRight } from "react-icons/bs";
-import {IoIosDocument} from "react-icons/io"
+import { ArrowRight} from 'react-bootstrap-icons';
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
 const logoDark = "./assets/logo/sid-logo-blue.svg";
@@ -36,7 +35,7 @@ const Footer = () => {
                     href="ksadksjdsdjk"
                     className="ms-4 ms-lg-5 rounded-circle bg-light d-flex justify-content-center align-items-center sid-footer__cbutton"
                   >
-                    <BsArrowRight className="" />
+                    <ArrowRight className="" />
                   </a>
                 </div>
 
@@ -78,7 +77,7 @@ const Footer = () => {
                 <h4 className="sid-font__head text-uppercase text-2xl text-lg-4xl font-light color-white  my-lg-4">
                   Siddhi Parkar
                 </h4>
-                <SocialMedia iconSize="text-4xl text-lg-8xl" />
+                <SocialMedia iconSize="text-4xl text-lg-7xl" />
               </motion.div>
             </Col>
           </Row>

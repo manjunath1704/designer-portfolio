@@ -1,92 +1,174 @@
-import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
-
-
-function QuillEditor({ value, onChange }) {
-  return (
-    <ReactQuill
-      value={value}
-      onChange={onChange}
-      modules={{
-        toolbar: [
-          [{ 'header': '1' }, { 'header': '2' }],
-          ['bold', 'italic', 'underline'],
-          [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-          ['link'],
-        ],
-      }}
-    />
-  );
-}
-
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import { useForm } from "react-hook-form";
+import {XCircleFill, PlusCircle,CloudArrowUpFill,Upload} from 'react-bootstrap-icons';
 function CreateProject() {
-  const { handleSubmit,control, register, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    control, setValue
+  } = useForm();
 
+  const [thumbnailUrl, setThumbnailUrl] = useState(""); // State to store the selected thumbnail URL
+
+  const handleThumbnailChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setThumbnailUrl(event.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleClearThumbnail = () => {
+    setThumbnailUrl("");
+  };
+
+  // images : Start
+  const [images, setImages] = useState([]);
+  const handleImageChange = (e) => {
+    const newImages = [...images];
+
+    for (let i = 0; i < e.target.files.length; i++) {
+      const file = e.target.files[i];
+      const reader = new FileReader();
+
+      reader.onload = (event) => {
+        newImages.push(event.target.result);
+        setImages(newImages);
+        setValue('images', newImages);
+      };
+
+      reader.readAsDataURL(file);
+    }
+  };
+  const handleDeleteImage = (index) => {
+    const newImages = [...images];
+    newImages.splice(index, 1);
+    setImages(newImages);
+    setValue('images', newImages);
+  };
+  // images : End
   const onSubmit = (data) => {
-    // Handle form submission here
-    console.log(data);
+    console.log(data, "data");
+  };
+
+  const animationVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
+
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <label>Name:</label>
-        <input
-          type="text"
-          name="projectTitle"
-          {...register('projectTitle', {required:'projectTitle is required'})}
-        />
-        {errors.projectTitle && <p>{errors.projectTitle.message}</p>}
-      </div>
+    <Container className="py-5">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Row className="g-4">
+        <Col xs={12}>
+            <input
+              className="dashboard-input"
+              type="text"
+              {...register("project_name", {
+                required: "Project Name is required",
+              })}
+              placeholder="Project Name"
+            />
+            {errors.project_name && (
+              <p className="text-sm text-danger mt-1 font-body">
+                {errors.project_name.message}
+              </p>
+            )}
+          </Col>
+          <Col md={4}>
+            <div className="thumbnail-container hover-unset">
+            <article className="sid-card position-relative hover-unset">
+                 {
+                  thumbnailUrl &&  <button
+                  type="button"
+                  className="position-absolute  close-button bg-transparent"
+                  onClick={handleClearThumbnail}
+                >
+                  
+                  <XCircleFill className="text-danger text-4xl"/>
+                </button>
+                 }
+                  <figure className={`sid-card__wrap overflow-hidden position-relative d-flex align-items-center justify-content-center ${thumbnailUrl ? "" : "border-dashed"}`} >
+                   
+                    {
+                      thumbnailUrl ?  <motion.img
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={animationVariants}
+                      className="sid-card__thumbnail h-100 w-100"
+                      src={thumbnailUrl}
+                      alt="Thumbnail Preview"
+                    /> : <div className="text-center">
+                      <Upload className="cms-app-color text-5xl"/>
+                    <p className="text-xl mt-2">Upload Thumbnail</p>
+                  </div>
+                    }
+                   
+                    
+                    <input
+                type="file"
+                accept="image/*"
+                onChange={handleThumbnailChange}
+                className="image-upload position-absolute w-100 h-100 opacity-0"
+              />
+                  </figure>
+                </article>
 
-      <div>
-        <label>Description:</label>
-        <input
-          type="text"
-          name="description"
-          {...register('description', {required:'Description is required'})}
-        />
-        {errors.description && <p>{errors.description.message}</p>}
-      </div>
-
-      <div>
-        <label>Thumbnail:</label>
+              
+            </div>
+          </Col>
+         
+<Col md={8}>
+       <div className="image-uploads-muliple position-relative border-dashed d-flex align-items-center justify-content-center">
+       <div className="text-center">
+                      <Upload className="cms-app-color text-5xl"/>
+                    <p className="text-xl mt-2">Add Images  </p >
+                  </div>
         <input
           type="file"
-          name="thumbnail"
-          {...register('thumbnail', {required:'Thumbnail is required'})}
-        />
-      </div>
-
-      <div>
-        <label>Images:</label>
-        <input
-          type="file"
-          name="images"
           multiple
-          {...register('images', {required:'Images are required'})}
+          accept="image/*"
+          onChange={handleImageChange}
+          className="w-100 h-100 position-absolute opacity-0"
         />
-        {errors.images && <p>{errors.images.message}</p>}
+       
       </div>
-
       <div>
-        <label>Rich Text:</label>
-        <Controller
-          name="richText"
-          control={control}
-          defaultValue=""
-          render={({ field }) => <QuillEditor {...field} />}
-        />
-        {errors.richText && <p>{errors.richText.message}</p>}
+       <div className="d-flex flex-wrap">
+       {images.map((image, index) => (
+          <div key={index} className="image-preview overflow-hidden position-relative me-2 mb-2">
+            <img src={image} thumbnail className="image-preview__img w-100 h-100" />
+            <button
+              onClick={() => handleDeleteImage(index)}
+              className="position-absolute  close-button bg-transparent"
+            >
+               <XCircleFill className="text-danger text-xl"/>
+            </button>
+          </div>
+        ))}
+       </div>
       </div>
-
-      <button type="submit">Submit</button>
-    </form>
+</Col>
+          <Col xs={12}>
+            <Button variant="success" type="submit">
+              Submit
+            </Button>
+            <Button variant="danger" className="ms-3">
+              Cancel
+            </Button>
+          </Col>
+        </Row>
+      </form>
+    </Container>
   );
 }
 
 export default CreateProject;
-

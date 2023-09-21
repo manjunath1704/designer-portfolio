@@ -79,3 +79,20 @@
 .border-bottom-lightblue{
   border-bottom: 1px solid var(--lightblue);
 }
+.border-dashed{
+  border:1px dashed var(--lightblue);
+}
+.border-solid{
+  border:1px solid var(--lightblue);
+}
+.hover-unset{
+  &:hover{
+    all: unset;
+  }
+}
+.dashboard-input{
+  border-radius: 14px;
+  border: 1px solid var(--cms-app-color);
+  width: 100%;
+  padding: 0.7rem 0.7rem;
+}

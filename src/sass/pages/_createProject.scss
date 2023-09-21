@@ -1,0 +1,22 @@
+.close-button{
+  z-index: 5;
+  top:2%;
+  right:2%;
+}
+.image-upload{
+
+}
+.image-uploads-muliple{
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.image-preview{
+  height: 90px;
+  width:200px;
+  border-radius: 8px;
+  .image-preview__img{
+object-fit: cover;
+object-position: top;
+  }
+}
