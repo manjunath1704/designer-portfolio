@@ -5,6 +5,7 @@ import Login from './Views/ContentManager/Login';
 import CreateUiUxProjects from './Views/ContentManager/UiUx/create';
 import ProjectView from './Views/ProjectView';
 import CreateProject from './Views/ContentManager/Projects/Create';
+import Cfff from './Views/ContentManager/Projects/Cfff';
 
 const AppRoutes = () => {
   return(
@@ -16,6 +17,7 @@ const AppRoutes = () => {
       <Route path="/create-uiux-projects" element={<CreateUiUxProjects/>}/>
       <Route path="/project-view" element={<ProjectView/>}/>
       <Route path="/cms/create-project" element={<CreateProject/>}/>
+      <Route path="/cms/cfff" element={<Cfff/>}/>
     </Routes>
     </Router>
   )

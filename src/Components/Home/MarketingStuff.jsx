@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
 import db from "../../firebase";
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, getDocs  } from "firebase/firestore";
 
 const projectData = [
   {
@@ -20,15 +20,21 @@ const projectData = [
   }
 ];
 const MarketingStuff = () => {
-  // const [projects, setProjects] = useState([]);
-  // useEffect(
-  //   () =>
-  //     onSnapshot(collection(db, "uiux-projects"), (snapshot) => {
-  //       setProjects(snapshot.docs.map((doc) => ({...doc.data(), id:doc.id})));
-  //     }),
-  //   []
-  // );
-  // console.log(projects, "projects");
+  const [projects, setProjects] = useState([]);
+  const projectsCollectionRef = collection(db,"projects")
+  useEffect(()=>{
+    const getProjectList = async () => {
+      try{
+        const data = await getDocs(projectsCollectionRef);
+        const filteredData = data.docs.map((doc) => ({...doc.data(), id:doc.id,}))
+        setProjects(filteredData)
+      } catch(err){
+        console.error(err)
+      }
+    }
+    getProjectList();
+  }, []);
+  console.log(projects, "projects");
   return (
     <>
 
@@ -72,17 +78,22 @@ const MarketingStuff = () => {
         </Row>
       </Container>
     </section>
-    {/* <Row className="g-4">
+    <Row className="g-4">
           {projects.map((data) => {
             return (
-              <Col xs={12} sm={6} lg={4} key={data.id} className="bg-danger me-4">
-                <h4>{data.projectLink}</h4>
-                <h4>{data.projectName}</h4>
+              <Col xs={12} key={data.id} className="bg-danger">
+                <h4>{data.description}</h4>
+                <h4>{data.title}</h4>
                 <h4>{data.thumbnail}</h4>
+                <h4>{data.mobileThumbnail}</h4>
+                 <h4>{data.category}</h4>
+                 <h4>{data.coverImage}</h4>
+                  {/* <h4>{data.projectImages}</h4>
+                   <h4>{data.projectVideos}</h4> */}
               </Col>
             );
           })}
-        </Row> */}
+        </Row>
     </>
   );
 };
