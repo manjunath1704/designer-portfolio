@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import Hero from "../../Components/ProjectView/Hero";
 import Layout from "../../Components/Layout/Layout";
 
 const ProjectDetails = () => {
@@ -10,11 +9,7 @@ const ProjectDetails = () => {
   console.log(details, "details found");
   return (
     <Layout>
-      <Hero
-        heroTitle={details.title}
-        heroDesc={details.description}
-        backgroundImage={details.coverImage}
-      />
+    
       <Container className="pt-8">
         <Row>
           {details &&
