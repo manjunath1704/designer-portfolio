@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
@@ -7,36 +7,19 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
+import db from "../../firebase";
+import { collection, getDocs } from "firebase/firestore";
 
-const projectsData = [
-  {
-    projectLink:
-      "https://stackoverflow.com/questions/39195687/setting-a-backgroundimage-with-react-inline-styles",
-    backgroundImage:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-47ceafde-6060-4820-9bee-c81047e2a5b6.png?h=612&e=webp&nll=true",
-  },
-  {
-    projectLink:
-      "https://stackoverflow.com/questions/39195687/setting-a-backgroundimage-with-react-inline-styles",
-    backgroundImage:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-47ceafde-6060-4820-9bee-c81047e2a5b6.png?h=612&e=webp&nll=true",
-  },
-  {
-    projectLink:
-      "https://stackoverflow.com/questions/39195687/setting-a-backgroundimage-with-react-inline-styles",
-    backgroundImage:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-b65a7fba-e69d-4c95-a0a7-d359444f254a.png?h=612&e=webp&nll=true",
-  },
-  {
-    projectLink:
-      "https://stackoverflow.com/questions/39195687/setting-a-backgroundimage-with-react-inline-styles",
-    backgroundImage:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-d2556dfa-cc47-4521-b6b9-d671ebde75b8.png?h=612&e=webp&nll=true",
-  },
-];
-const SlideImage = ({ backgroundImage, projectLink }) => {
+const SlideImage = ({ backgroundImage, data, title }) => {
+  const noSpaceTitle = title.split(" ")?.join("-");
+
   return (
-    <a href={projectLink} className="d-block">
+    <Link
+      to={`/project-details/${noSpaceTitle}`}
+      state={{ details: data }}
+      className="d-block"
+    >
       <div className="sid-projects__slide">
         <img
           src={backgroundImage}
@@ -44,22 +27,52 @@ const SlideImage = ({ backgroundImage, projectLink }) => {
           className="sid-projects__image w-100 h-100 d-block"
         />
       </div>
-    </a>
+    </Link>
   );
 };
 const Projects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [projects, setProjects] = useState([]);
+  const projectsCollectionRef = collection(db, "projects");
+  useEffect(() => {
+    const getProjectList = async () => {
+      try {
+        const data = await getDocs(projectsCollectionRef);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setProjects(filteredData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    getProjectList();
+  }, []);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 998); // Adjust the breakpoint as needed
+    };
 
+    checkIfMobile();
+
+    window.addEventListener("resize", checkIfMobile);
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
   return (
- 
-    <motion.section className="sid-section sid-projects" ref={ref}
-    style={{
-      transform: isInView ? "none" : "translateY(200px)",
-      opacity: isInView ? 1 : 1,
-      transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s"
-    }}
+    <motion.section
+      className="sid-section sid-projects"
+      ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateY(200px)",
+        opacity: isInView ? 1 : 1,
+        transition: "all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+      }}
     >
       <Container className="sid-projects__wrapper">
         <h5 className="color-black text-4xl text-lg-8xl sid-font__head text-center mb-10">
@@ -79,12 +92,16 @@ const Projects = () => {
                 disableOnInteraction: false,
               }}
             >
-              {projectsData.map((data, index) => {
+              {projects.map((data, index) => {
                 return (
                   <SwiperSlide key={index}>
                     <SlideImage
+                      data={data}
+                      title={data.title}
                       projectLink={data.projectLink}
-                      backgroundImage={data.backgroundImage}
+                      backgroundImage={
+                        isMobile ? data.mobileThumbnail : data.thumbnail
+                      }
                     />
                   </SwiperSlide>
                 );
@@ -94,7 +111,6 @@ const Projects = () => {
         </Row>
       </Container>
     </motion.section>
-
   );
 };
 export default Projects;

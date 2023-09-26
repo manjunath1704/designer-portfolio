@@ -15,6 +15,9 @@
       }
       &slider {
         border-radius:50px;
+        @media(max-width:998px){
+          border-radius:50px;
+        }
       }
       &image{
         object-fit: cover;

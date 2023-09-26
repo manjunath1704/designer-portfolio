@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRight} from 'react-bootstrap-icons';
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
-const logoDark = "./assets/logo/sid-logo-blue.svg";
+const logoDark = "/assets/logo/sid-logo-blue.svg";
 
 const Footer = () => {
   const footerTop = useRef(null);

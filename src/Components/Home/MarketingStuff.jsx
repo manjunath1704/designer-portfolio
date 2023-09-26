@@ -78,7 +78,7 @@ const MarketingStuff = () => {
         </Row>
       </Container>
     </section>
-    <Row className="g-4">
+    {/* <Row className="g-4">
           {projects.map((data) => {
             return (
               <Col xs={12} key={data.id} className="bg-danger">
@@ -88,12 +88,11 @@ const MarketingStuff = () => {
                 <h4>{data.mobileThumbnail}</h4>
                  <h4>{data.category}</h4>
                  <h4>{data.coverImage}</h4>
-                  {/* <h4>{data.projectImages}</h4>
-                   <h4>{data.projectVideos}</h4> */}
+                 
               </Col>
             );
           })}
-        </Row>
+        </Row> */}
     </>
   );
 };
