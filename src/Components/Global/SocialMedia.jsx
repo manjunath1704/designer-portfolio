@@ -1,6 +1,6 @@
 import { Behance, Linkedin } from 'react-bootstrap-icons';
 const dataSocial = [
-  { name: "Behance", link: "#", icon: <Behance/> },
+  // { name: "Behance", link: "#", icon: <Behance/> },
   { name: "LinkedIN", link: "#", icon:  <Linkedin/>},
 ];
 

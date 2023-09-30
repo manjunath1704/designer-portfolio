@@ -15,11 +15,9 @@
             &-- {
               &lg {
                 font-size: 220px;
-               
               }
               &md {
                 font-size: 180px;
-                
               }
               &sm {
                 font-size: 70px;
@@ -27,6 +25,16 @@
             }
           }
         }
+      }
+      &video {
+        // height: 350px;
+        // width: 350px;
+        position: absolute;
+        right: 10%;
+        top: 15%;
+      @media(max-width:998px){
+        display: none;
+      }
       }
     }
   }

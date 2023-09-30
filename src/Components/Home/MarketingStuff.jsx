@@ -8,15 +8,13 @@ import { collection, getDocs  } from "firebase/firestore";
 const projectData = [
   {
     projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
-    projectThumbnail:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-04a659f4-3ba4-40c6-9b27-c52c7f6617a1.png?w=885&e=webp&nll=true",
-    projectLink: "www.google.com",
+    projectThumbnail:"/assets/thumbnails/emailers/emailer-xs.png",
+    projectLink: "",
   },
   {
-    projectTitle: "WEB INTERFACE DESIGN & BRAND IDENTITY — Mes Travaux Économiques",
-    projectThumbnail:
-      "https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-32269c02-b7bf-4096-a1f0-e78762eaf55b.png?w=885&e=webp&nll=true&cX=0.6238447319777833&cY=0&cW=1693.7523105360444&cH=2208 2x, https://d2kq0urxkarztv.cloudfront.net/62c2eecea67ec50023695793/4046480/image-32269c02-b7bf-4096-a1f0-e78762eaf55b.png?w=1328&e=webp&nll=true&cX=0.6238447319777833&cY=0&cW=1693.7523105360444&cH=2208",
-    projectLink: "www.google.com",
+    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectThumbnail:"/assets/thumbnails/emailers/useralia-social-media.png",
+    projectLink: "",
   }
 ];
 const MarketingStuff = () => {
