@@ -6,6 +6,8 @@ import { Container } from "react-bootstrap";
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
 const logoDark = "/assets/logo/sid-logo-blue.svg";
+
+
 const Header = () => {
   // const [isPopupOpen, setIsPopupOpen] = useState(false);
   // const openPopup = () => {
