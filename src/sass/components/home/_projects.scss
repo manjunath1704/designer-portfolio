@@ -14,15 +14,13 @@
         border-top-right-radius: 50px;
       }
       &slider {
-        border-radius:50px;
-        @media(max-width:998px){
-          border-radius:50px;
-        }
+        border-radius:30px;
+        overflow: hidden;
       }
       &image{
         object-fit: cover;
         object-position: contain;
-        border-radius:50px;
+        border-radius:30px;
       }
     }
   }

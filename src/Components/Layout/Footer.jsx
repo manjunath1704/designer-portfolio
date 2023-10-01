@@ -32,10 +32,10 @@ const Footer = () => {
                     LET'S CONNECT
                   </h5>
                   <a
-                    href="ksadksjdsdjk"
+                    href="mailto:siddhi.parkar95@gmail.com"
                     className="ms-4 ms-lg-5 rounded-circle bg-light d-flex justify-content-center align-items-center sid-footer__cbutton"
                   >
-                    <ArrowRight className="" />
+                    <ArrowRight className="text-dark" />
                   </a>
                 </div>
 
@@ -83,10 +83,7 @@ const Footer = () => {
           </Row>
         </Container>
       </div>
-      {/* <motion.div  whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}
-      className="sid-footer__resume d-flex align-items-center justify-content-center">
-       <IoIosDocument className="text-8xl color-white"/>
-      </motion.div> */}
+     
       
     </footer>
   );

@@ -1,7 +1,7 @@
 import { Behance, Linkedin } from 'react-bootstrap-icons';
 const dataSocial = [
   // { name: "Behance", link: "#", icon: <Behance/> },
-  { name: "LinkedIN", link: "#", icon:  <Linkedin/>},
+  { name: "LinkedIN", link: "https://www.linkedin.com/in/siddhi-parkar-5127b958/", icon:  <Linkedin/>},
 ];
 
 const SocialMedia = ({iconSize}) => {
@@ -10,7 +10,7 @@ const SocialMedia = ({iconSize}) => {
       {dataSocial.map((data, index) => {
         return (
           <li key={index} className="me-3">
-            <a href={data.link} className={`${iconSize} color-white`}>
+            <a href={data.link} className={`${iconSize} color-white`} target='_blank' rel="noreferrer">
              {data.icon}
             </a>
           </li>

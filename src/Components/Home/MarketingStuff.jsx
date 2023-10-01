@@ -7,14 +7,14 @@ import { collection, getDocs  } from "firebase/firestore";
 
 const projectData = [
   {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/emailers/emailer-xs.png",
-    projectLink: "",
+    projectLink: "/email-marketing",
   },
   {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/emailers/useralia-social-media.png",
-    projectLink: "",
+    projectLink: "/social-media",
   }
 ];
 const MarketingStuff = () => {
@@ -66,7 +66,7 @@ const MarketingStuff = () => {
                <Card
                   titleColor="color-black"
                   projectThumbnail={data.projectThumbnail}
-                  projectTitle={data.projectTitle}
+                  projectTitle={data && data.projectTitle}
                   projectLink={data.projectLink}
                   delay={0.6 * index}
                 />

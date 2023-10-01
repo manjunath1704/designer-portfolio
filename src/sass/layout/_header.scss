@@ -1,12 +1,22 @@
 #{$app}- {
   &navbar {
-    background-color: var(--black);
     z-index: 99999;
+    &--{
+      &dark{
+        background-color: var(--black);
+      }
+      &glassmorphism{
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.50);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+      }
+    }
     &__{
       &logo{
         width: 75px;
         @media(min-width:768px){
-          width: 100px;
+          width: 87px;
         }
       }
     }

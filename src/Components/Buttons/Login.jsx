@@ -5,20 +5,20 @@ const LoginButton = ({ name, link, onClick, type, additionalClass }) => {
       {link ? (
         <Link
           to={link}
-          className={`d-inline-block bg-transparent sid-button__login color-white text-md px-18 ${additionalClass}`}
+          className={`d-inline-block bg-transparent sid-button__login color-white text-md px-8 ${additionalClass}`}
         >
           {name}
         </Link>
       ) : onClick ? (
         <button
-          className={`d-inline-block bg-transparent sid-button__login color-white text-md px-18 ${additionalClass}`}
+          className={`d-inline-block bg-transparent sid-button__login color-white text-md px-8 ${additionalClass}`}
           onClick={onClick}
         >
           {name}
         </button>
       ) : type ? (
         <button
-          className={`d-inline-block bg-transparent sid-button__login color-white text-md px-18  ${additionalClass}`}
+          className={`d-inline-block bg-transparent sid-button__login color-white text-md px-8  ${additionalClass}`}
           type={type}
         >
           {name}

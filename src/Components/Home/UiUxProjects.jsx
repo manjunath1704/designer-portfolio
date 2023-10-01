@@ -3,47 +3,47 @@ import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
 
 const projectData = [
-  {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
-    projectThumbnail:"/assets/thumbnails/projects/datautics-website.png",
-    projectLink: "",
-  },
+  // {
+  //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+  //   projectThumbnail:"/assets/thumbnails/projects/datautics-website.png",
+  //   projectLink: "",
+  // },
 
   {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-a.png",
-    projectLink: "",
+    projectLink: "/useralia",
   },
   {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/maven-thumbnail.png",
-    projectLink: "",
+    projectLink: "/maven-silicon",
   },
+  // {
+  //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+  //   projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-b.png",
+  //   projectLink: "",
+  // },
   {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
-    projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-b.png",
-    projectLink: "",
-  },
-  {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/edlore-xs.png",
-    projectLink: "",
+    projectLink: "/edlore",
   },
   {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/genex-website-xs.png",
-    projectLink: "",
+    projectLink: "/genex",
   },
   {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/limitless-xs.png",
-    projectLink: "",
+    projectLink: "/limitless",
   },
-  {
-    projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
-    projectThumbnail:"/assets/thumbnails/projects/one-hat-a.png",
-    projectLink: "",
-  }
+  // {
+  //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+  //   projectThumbnail:"/assets/thumbnails/projects/one-hat-a.png",
+  //   projectLink: "",
+  // }
 ];
 const UiUxProjects = () => {
   return (
@@ -68,7 +68,7 @@ const UiUxProjects = () => {
             <Col xs={12}>
               
               <h5 className="color-white text-4xl text-lg-8xl sid-font__head text-center mb-5">
-                UI UX Design Projects
+                UI UX Design
               </h5>
               
             </Col>
@@ -81,7 +81,7 @@ const UiUxProjects = () => {
                   <Card
                     titleColor="color-white"
                     projectThumbnail={data.projectThumbnail}
-                    projectTitle={data.projectTitle}
+                    projectTitle={data && data.projectTitle}
                     projectLink={data.projectLink}
                     delay={0.6 * index}
                   />

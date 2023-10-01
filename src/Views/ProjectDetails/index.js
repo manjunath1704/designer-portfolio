@@ -1,16 +1,16 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-import Layout from "../../Components/Layout/Layout";
-
+import LayoutSecondary from "../../Components/Layout/LayoutSecondary";
+import { Player, BigPlayButton } from "video-react";
 const ProjectDetails = () => {
   const location = useLocation();
   const { details } = location.state;
   console.log(details, "details found");
+
   return (
-    <Layout>
-    
-      <Container className="pt-8">
+    <LayoutSecondary>
+      <div className="overflow-hidden">
         <Row>
           {details &&
             details.projectImages &&
@@ -27,7 +27,7 @@ const ProjectDetails = () => {
               );
             })}
         </Row>
-      </Container>
+      </div>
       {details && details.projectVideos.length > 0 && (
         <section className="background-black">
           <Container className="mt-14 pt-16 pb-8 ">
@@ -42,9 +42,13 @@ const ProjectDetails = () => {
                 details.projectVideos.map((videoUrl, index) => {
                   return (
                     <Col lg={6} key={index}>
-                      <video controls muted>
+                      {/* <video controls muted>
                         <source src={videoUrl} type="video/mp4" />
-                      </video>
+                      </video> */}
+                      <Player src={videoUrl}  poster="/assets/thumbnails/projects/datautics-website.png">
+                        
+                        <BigPlayButton position="center" />
+                      </Player>
                     </Col>
                   );
                 })}
@@ -52,7 +56,7 @@ const ProjectDetails = () => {
           </Container>
         </section>
       )}
-    </Layout>
+    </LayoutSecondary>
   );
 };
 
