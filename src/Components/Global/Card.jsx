@@ -1,6 +1,7 @@
 import React from "react";
 import { useInView,motion } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 const Card = ({
   projectTitle,
   projectThumbnail,
@@ -25,7 +26,7 @@ const Card = ({
     },
   };
   return (
-    <motion.a
+    <motion.div
       ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -33,7 +34,8 @@ const Card = ({
       className="sid-card__link position-relative"
       href={projectLink}
     >
-      <article className="sid-card position-relative">
+    <Link to={projectLink}>
+    <article className="sid-card position-relative">
         <figure className="sid-card__wrap overflow-hidden position-relative">
           <img
             className="sid-card__thumbnail h-100 w-100"
@@ -47,7 +49,8 @@ const Card = ({
           </h4>
         </footer>
       </article>
-    </motion.a>
+    </Link>
+    </motion.div>
   );
 };
 export default Card;

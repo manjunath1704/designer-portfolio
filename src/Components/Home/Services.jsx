@@ -49,7 +49,7 @@ const ServicesCard = ({ cardTitle, cardDescription, delay }) => {
       animate={isInView ? "visible" : "hidden"}
       variants={cardVariants}
     >
-      <h6 className="text-2xl text-lg-4xl color-white sid-font__body font-bold mb-2 mb-lg-5">
+      <h6 className="text-2xl text-lg-4xl color-white sid-font__body font-bold mb-2 mb-lg-3">
         {cardTitle}
       </h6>
       <p className="text-md text-lg-xl color-white sid-font__body mb-0">
@@ -64,7 +64,7 @@ const Services = () => {
       <Container>
         <Row>
           <Col xs={12}>
-            <h5 className="color-white text-4xl text-lg-8xl sid-font__head mb-5">
+            <h5 className="color-white text-4xl text-lg-8xl sid-font__head mb-8">
               My process involves
             </h5>
           </Col>

@@ -6,38 +6,38 @@ const projectData = [
   // {
   //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
   //   projectThumbnail:"/assets/thumbnails/projects/datautics-website.png",
-  //   projectLink: "",
+  //   theLink: "",
   // },
 
   {
     // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-a.png",
-    projectLink: "/useralia",
+    theLink: "/useralia",
   },
   {
     // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/maven-thumbnail.png",
-    projectLink: "/maven-silicon",
+    theLink: "/maven-silicon",
   },
   // {
   //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
   //   projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-b.png",
-  //   projectLink: "",
+  //   theLink: "",
   // },
   {
     // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/edlore-xs.png",
-    projectLink: "/edlore",
+    theLink: "/edlore",
   },
   {
     // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/genex-website-xs.png",
-    projectLink: "/genex",
+    theLink: "/genex",
   },
   {
     // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/limitless-xs.png",
-    projectLink: "/limitless",
+    theLink: "/limitless",
   },
   // {
   //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
@@ -77,15 +77,13 @@ const UiUxProjects = () => {
             {projectData.map((data, index) => {
               return (
                 <Col xs={12} sm={6} lg={4} key={index}>
-                  
                   <Card
                     titleColor="color-white"
                     projectThumbnail={data.projectThumbnail}
                     projectTitle={data && data.projectTitle}
-                    projectLink={data.projectLink}
+                    projectLink={data.theLink}
                     delay={0.6 * index}
                   />
-                 
                 </Col>
               );
             })}
