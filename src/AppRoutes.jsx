@@ -20,6 +20,7 @@ import SocialMedia from "./Views/ProjectViews/SocialMedia";
 import LimitLess from "./Views/ProjectViews/LimitLess";
 import Useralia from "./Views/ProjectViews/Useralia";
 import Genex from "./Views/ProjectViews/Genex";
+import NotFound from "./Views/404";
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -49,6 +50,7 @@ const AppRoutes = () => {
         <Route path="/limitless" element={<LimitLess />} />
         <Route path="/useralia" element={<Useralia />} />
         <Route path="/genex" element={<Genex />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
