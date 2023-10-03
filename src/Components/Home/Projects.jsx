@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     thumbnail:"/assets/projects-slider/edlore.jpg",
-    mobileThumbnail:"/assets/projects-slider/edlore-mobile.png",
+    mobileThumbnail:"/assets/projects-slider/edlore-mobile.jpg",
     link:"/edlore",
   },
   {

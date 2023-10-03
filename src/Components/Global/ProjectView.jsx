@@ -1,5 +1,6 @@
 import { Col, Row, Image } from "react-bootstrap";
 import { Player, BigPlayButton } from "video-react";
+import { useInView } from "framer-motion"
 const ProjectView = ({ projectImages, projectVideos }) => {
   return (
     <>
@@ -40,11 +41,16 @@ const ProjectView = ({ projectImages, projectVideos }) => {
                     <Col
                       lg={10}
                       key={index}
-                      className={`my-8 ${index % 2 === 0 ? "me-auto" : "ms-auto"}`}
+                      className={`my-8 ${
+                        index % 2 === 0 ? "me-auto" : "ms-auto"
+                      }`}
                     >
-                      <Player src={videoUrl}>
+                      {
+                        useInView ? <Player src={videoUrl} playsInline muted="false" autoPlay>
                         <BigPlayButton position="center" />
-                      </Player>
+                      </Player> : <></>
+                      }
+                      
                     </Col>
                   );
                 })}

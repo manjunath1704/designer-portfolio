@@ -60,7 +60,7 @@ const Header = () => {
           </div>
           <div className="d-flex align-items-center">
             <SocialMedia iconSize="text-4xl" />
-            <a href="/assets/docs/siddhi-parkar-resume.pdf" target="_blank" className="d-inline-block d-none d-lg-block bg-transparent sid-button__login color-white text-md px-8">Resume</a>
+            <a href="/assets/docs/siddhi-parkar-resume.pdf" target="_blank" className="d-none d-lg-block bg-transparent sid-button__login color-white text-md px-8">Resume</a>
             
           </div>
         </div>
