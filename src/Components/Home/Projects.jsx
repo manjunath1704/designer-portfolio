@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 const projects = [
   {
-    thumbnail:"/assets/projects-slider/edlore.png",
+    thumbnail:"/assets/projects-slider/edlore.jpg",
     mobileThumbnail:"/assets/projects-slider/edlore-mobile.png",
     link:"/edlore",
   },

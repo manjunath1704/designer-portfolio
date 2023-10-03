@@ -3,12 +3,16 @@ import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
 
 const projectData = [
-  // {
+  {
+    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectThumbnail:"/assets/thumbnails/projects/maven-thumbnail.png",
+    theLink: "/maven-silicon",
+  },
+    // {
   //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
-  //   projectThumbnail:"/assets/thumbnails/projects/datautics-website.png",
-  //   theLink: "",
-  // },
-
+  //   projectThumbnail:"/assets/thumbnails/projects/one-hat-a.png",
+  //   projectLink: "",
+  // }
   {
     // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
     projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-a.png",
@@ -16,9 +20,17 @@ const projectData = [
   },
   {
     // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
-    projectThumbnail:"/assets/thumbnails/projects/maven-thumbnail.png",
-    theLink: "/maven-silicon",
+    projectThumbnail:"/assets/thumbnails/projects/limitless-xs.png",
+    theLink: "/limitless",
   },
+  // {
+  //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+  //   projectThumbnail:"/assets/thumbnails/projects/datautics-website.png",
+  //   theLink: "",
+  // },
+
+
+ 
   // {
   //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
   //   projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-b.png",
@@ -34,16 +46,8 @@ const projectData = [
     projectThumbnail:"/assets/thumbnails/projects/genex-website-xs.png",
     theLink: "/genex",
   },
-  {
-    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
-    projectThumbnail:"/assets/thumbnails/projects/limitless-xs.png",
-    theLink: "/limitless",
-  },
-  // {
-  //   // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
-  //   projectThumbnail:"/assets/thumbnails/projects/one-hat-a.png",
-  //   projectLink: "",
-  // }
+
+
 ];
 const UiUxProjects = () => {
   return (

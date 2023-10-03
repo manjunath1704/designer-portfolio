@@ -32,9 +32,10 @@
         position: absolute;
         right: 10%;
         top: 15%;
-      @media(max-width:998px){
-        display: none;
-      }
+        @media (max-width: 998px) {
+          right: 0;
+          top: 38%;
+        }
       }
     }
   }
