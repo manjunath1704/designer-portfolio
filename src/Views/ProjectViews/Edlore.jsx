@@ -6,8 +6,7 @@ const edloreImages = [
   "/assets/projects-view/edlore/edlore-d.jpg",
   "/assets/projects-view/edlore/edlore-f.jpg",
   "/assets/projects-view/edlore/edlore-c.jpg",
- 
-  "/assets/projects-view/edlore/edlore-e.jpg",
+  "/assets/projects-view/edlore/edlore-updated.jpg",
 
 ];
 const edloreVideos = [

@@ -5,7 +5,7 @@ const ProjectView = ({ projectImages, projectVideos }) => {
   return (
     <>
       {/* Images : Start */}
-      <section className="mb-5">
+      <section className="mb-8">
         <div className="overflow-hidden">
           <Row>
             {projectImages &&
@@ -28,7 +28,7 @@ const ProjectView = ({ projectImages, projectVideos }) => {
       {/* Videos : Start */}
       {projectVideos && (
         <section className="background-black sid-projects__videos">
-          <div className="mt-14 pt-16 pb-8 container-fluid">
+          <div className="pt-16 pb-8 container-fluid">
             <Row className="g-4">
               <Col xs={12}>
                 <h2 className="sid-font__head text-5xl text-lg-9xl font-bold mb-2 text-uppercase color-white mb-3 text-center">
@@ -39,11 +39,12 @@ const ProjectView = ({ projectImages, projectVideos }) => {
                 projectVideos.map((videoUrl, index) => {
                   return (
                     <Col
-                      lg={10}
+                      lg={12}
                       key={index}
-                      className={`my-8 ${
-                        index % 2 === 0 ? "me-auto" : "ms-auto"
-                      }`}
+                      // className={`my-8 ${
+                      //   index % 2 === 0 ? "me-auto" : "ms-auto"
+                      // }`}
+                      className="my-8"
                     >
                       {
                         useInView ? <Player src={videoUrl} playsInline muted="false" autoPlay>

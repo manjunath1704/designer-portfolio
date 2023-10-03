@@ -7,12 +7,12 @@ import { collection, getDocs  } from "firebase/firestore";
 
 const projectData = [
   {
-    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectTitle: "Redington - Email marketing",
     projectThumbnail:"/assets/thumbnails/emailers/emailer-xs.png",
     projectLink: "/email-marketing",
   },
   {
-    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectTitle: "Useralia - Social media marketing",
     projectThumbnail:"/assets/thumbnails/emailers/useralia-social-media.png",
     projectLink: "/social-media",
   }

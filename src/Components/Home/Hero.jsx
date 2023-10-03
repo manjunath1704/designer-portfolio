@@ -26,7 +26,7 @@ const Hero = () => {
                 Siddhi Parkar
               </h4>
               <p className="sid-font__body text-2xl text-lg-4xl font-semibold">
-                UI UX Designer
+                UI/UX Designer
               </p>
               <a href="/assets/docs/siddhi-parkar-resume.pdf" target="_blank" className="mt-5  d-lg-none bg-transparent sid-button__login color-white text-md px-12">Resume</a>
       

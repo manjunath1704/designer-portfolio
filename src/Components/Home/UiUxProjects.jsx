@@ -4,7 +4,7 @@ import Card from "../Global/Card";
 
 const projectData = [
   {
-    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectTitle: "Maven Silicon - Project Management,UX Design & Interaction, Visual design",
     projectThumbnail:"/assets/thumbnails/projects/maven-thumbnail.png",
     theLink: "/maven-silicon",
   },
@@ -14,12 +14,12 @@ const projectData = [
   //   projectLink: "",
   // }
   {
-    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectTitle: "Useralia - UX Design & Interaction, Visual design",
     projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-a.png",
     theLink: "/useralia",
   },
   {
-    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectTitle: "LimitlessAF - UX Design & Interaction, Visual design",
     projectThumbnail:"/assets/thumbnails/projects/limitless-xs.png",
     theLink: "/limitless",
   },
@@ -37,12 +37,12 @@ const projectData = [
   //   theLink: "",
   // },
   {
-    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectTitle: "Edlore - Project Management, UX Design & Interaction, Visual design",
     projectThumbnail:"/assets/thumbnails/projects/edlore-xs.png",
     theLink: "/edlore",
   },
   {
-    // projectTitle: "COMPLETE APP DESIGN — MeetMySnake",
+    projectTitle: "GenexDBS- UX Design & Interaction, Visual design",
     projectThumbnail:"/assets/thumbnails/projects/genex-website-xs.png",
     theLink: "/genex",
   },
@@ -72,7 +72,7 @@ const UiUxProjects = () => {
             <Col xs={12}>
               
               <h5 className="color-white text-4xl text-lg-8xl sid-font__head text-center mb-5">
-                UI UX Design
+                UI/UX Design Projects
               </h5>
               
             </Col>

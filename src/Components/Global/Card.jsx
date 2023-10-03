@@ -36,7 +36,7 @@ const Card = ({
     >
     <Link to={projectLink}>
     <article className="sid-card position-relative">
-        <figure className="sid-card__wrap overflow-hidden position-relative">
+        <figure className="sid-card__wrap overflow-hidden position-relative mb-0">
           <img
             className="sid-card__thumbnail h-100 w-100"
             src={projectThumbnail}
@@ -44,7 +44,7 @@ const Card = ({
           />
         </figure>
         <footer>
-          <h4 className={`text-lg sid-font__body mt-2 ${titleColor}`}>
+          <h4 className={`text-lg sid-font__body mt-4 ${titleColor}`}>
             {projectTitle}
           </h4>
         </footer>
