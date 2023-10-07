@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRight} from 'react-bootstrap-icons';
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
-const logoDark = "/assets/logo/sid-logo-blue.svg";
+const logoDark = "/assets/logo/sid-logo-light-vone.svg";
 
 const Footer = () => {
   const footerTop = useRef(null);
@@ -74,7 +74,7 @@ const Footer = () => {
                     {" "}
                   </Link>
                 </div>
-                <h4 className="sid-font__head text-uppercase text-2xl text-lg-4xl font-light color-white  my-lg-4">
+                <h4 className="sid-font__head text-uppercase text-2xl text-lg-4xl font-light color-white mt-2  my-lg-4">
                   Siddhi Parkar
                 </h4>
                 <SocialMedia iconSize="text-4xl text-lg-7xl" />

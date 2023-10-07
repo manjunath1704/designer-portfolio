@@ -53,3 +53,9 @@
   left: 50% !important;
   transform: translate(-50%, -30%) !important;
   }
+  .sid-gradient__text{
+    // background: linear-gradient(to right, #050F4E 0%, #7565E0 100%);
+    background: linear-gradient(to right, #050F4E, #FBC6FF, #7565E0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

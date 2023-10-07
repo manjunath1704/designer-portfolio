@@ -6,7 +6,7 @@ import PopUp from "../Global/PopUp";
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
 import LoginButton from "../Buttons/Login";
-const logoDark = "/assets/logo/sid-logo-blue-dark.svg";
+const logoDark = "/assets/logo/sid-logo-dark-vone.svg";
 const HeaderSecondary = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const openPopup = () => {
@@ -48,7 +48,7 @@ const HeaderSecondary = () => {
     >
       <Container>
         <div className="d-flex justify-content-between align-items-center">
-          <div className="sid-navbar__logo position-relative py-2">
+          <div className="sid-navbar__logo position-relative py-4">
             <img
               src={logoDark}
               alt="logo"

@@ -8,12 +8,12 @@ import { collection, getDocs  } from "firebase/firestore";
 const projectData = [
   {
     projectTitle: "Redington - Email marketing",
-    projectThumbnail:"/assets/thumbnails/emailers/emailer-xs.png",
+    projectThumbnail:"/assets/thumbnails/emailers/emailer-xs.webp",
     projectLink: "/email-marketing",
   },
   {
     projectTitle: "Useralia - Social media marketing",
-    projectThumbnail:"/assets/thumbnails/emailers/useralia-social-media.png",
+    projectThumbnail:"/assets/thumbnails/emailers/useralia-social-media.webp",
     projectLink: "/social-media",
   }
 ];

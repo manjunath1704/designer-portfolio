@@ -5,7 +5,7 @@ import Card from "../Global/Card";
 const projectData = [
   {
     projectTitle: "Maven Silicon - Project Management,UX Design & Interaction, Visual design",
-    projectThumbnail:"/assets/thumbnails/projects/maven-thumbnail.png",
+    projectThumbnail:"/assets/thumbnails/projects/maven-thumbnail.webp",
     theLink: "/maven-silicon",
   },
     // {
@@ -15,12 +15,12 @@ const projectData = [
   // }
   {
     projectTitle: "Useralia - UX Design & Interaction, Visual design",
-    projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-a.png",
+    projectThumbnail:"/assets/thumbnails/projects/useralia-website-xs-a.webp",
     theLink: "/useralia",
   },
   {
     projectTitle: "LimitlessAF - UX Design & Interaction, Visual design",
-    projectThumbnail:"/assets/thumbnails/projects/limitless-xs.png",
+    projectThumbnail:"/assets/thumbnails/projects/limitless-xs.webp",
     theLink: "/limitless",
   },
   // {
@@ -38,12 +38,12 @@ const projectData = [
   // },
   {
     projectTitle: "Edlore - Project Management, UX Design & Interaction, Visual design",
-    projectThumbnail:"/assets/thumbnails/projects/edlore-xs.png",
+    projectThumbnail:"/assets/thumbnails/projects/edlore-xs.webp",
     theLink: "/edlore",
   },
   {
     projectTitle: "GenexDBS- UX Design & Interaction, Visual design",
-    projectThumbnail:"/assets/thumbnails/projects/genex-website-xs.png",
+    projectThumbnail:"/assets/thumbnails/projects/genex-website-xs.webp",
     theLink: "/genex",
   },
 
