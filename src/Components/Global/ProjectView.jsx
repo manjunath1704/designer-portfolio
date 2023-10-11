@@ -17,6 +17,7 @@ const ProjectView = ({ projectImages, projectVideos }) => {
                       alt={`maven-silicon-${index}`}
                       key={index}
                       fluid
+                      className="w-100"
                     />
                   </Col>
                 );
