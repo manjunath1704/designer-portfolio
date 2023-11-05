@@ -14,11 +14,11 @@ const projects = [
     mobileThumbnail:"/assets/projects-slider/edlore-mobile.jpg",
     link:"/edlore",
   },
-  {
-    thumbnail:"/assets/projects-slider/emailer.png",
-    mobileThumbnail:"/assets/projects-slider/emailer-mobile.png",
-    link:"/email-marketing",
-  },
+  // {
+  //   thumbnail:"/assets/projects-slider/emailer.png",
+  //   mobileThumbnail:"/assets/projects-slider/emailer-mobile.png",
+  //   link:"/email-marketing",
+  // },
   {
     thumbnail:"/assets/projects-slider/maven.png",
     mobileThumbnail:"/assets/projects-slider/maven-mobile.png",
