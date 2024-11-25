@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./Footer";
-import Header from "./Header";
+// import Footer from "./Footer";
+// import Header from "./Header";
 import CMSSidebar from "./CMSSidebar";
 import { Row,Col } from "react-bootstrap";
 

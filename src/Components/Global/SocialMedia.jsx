@@ -1,4 +1,4 @@
-import { Behance, Linkedin } from 'react-bootstrap-icons';
+import {   Linkedin } from 'react-bootstrap-icons';
 const dataSocial = [
   // { name: "Behance", link: "https://www.behance.net/siddhipark58b2", icon: <Behance/> },
   { name: "LinkedIN", link: "https://www.linkedin.com/in/siddhi-parkar-5127b958/", icon:  <Linkedin/>},
