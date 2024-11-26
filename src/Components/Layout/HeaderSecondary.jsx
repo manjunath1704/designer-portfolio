@@ -2,20 +2,49 @@ import React from "react";
 import { motion, useViewportScroll } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import PopUp from "../Global/PopUp";
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
-import LoginButton from "../Buttons/Login";
+import { getStorage, ref, listAll, getDownloadURL, getMetadata } from "firebase/storage";
 const logoDark = "/assets/logo/sid-logo-dark-vone.svg";
 const HeaderSecondary = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const openPopup = () => {
-    setIsPopupOpen(true);
+//  start
+const [resumeUrl, setResumeUrl] = useState(null);
+const [loading, setLoading] = useState(true);
+useEffect(() => {
+  const fetchResume = async () => {
+    try {
+      const storage = getStorage();
+      const resumesRef = ref(storage, "resumes/");
+      const list = await listAll(resumesRef);
+
+      if (list.items.length > 0) {
+        const filesWithMetadata = await Promise.all(
+          list.items.map(async (item) => {
+            const metadata = await getMetadata(item);
+            return { item, metadata };
+          })
+        );
+
+        filesWithMetadata.sort(
+          (a, b) => new Date(b.metadata.timeCreated) - new Date(a.metadata.timeCreated)
+        );
+
+        const latestFile = filesWithMetadata[0].item;
+        const url = await getDownloadURL(latestFile);
+        setResumeUrl(url);
+      } else {
+        console.log("No files found in Firebase Storage.");
+      }
+    } catch (error) {
+      console.error("Error fetching resume:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const closePopup = () => {
-    setIsPopupOpen(false);
-  };
+  fetchResume();
+}, []);
+// end
 
   // Navbar Animation
   const { scrollY } = useViewportScroll();
@@ -63,18 +92,26 @@ const HeaderSecondary = () => {
           </div>
           <div className="d-flex align-items-center">
             <SocialMedia iconSize="text-4xl text-dark" />
-            <a href="/assets/docs/siddhi-parkar-resume.pdf" target="_blank" className="d-inline-block bg-transparent sid-button__login color-white text-md px-8">Resume</a>
-            
+            {/* <a href="/assets/docs/siddhi-parkar-resume.pdf" target="_blank" className="d-inline-block bg-transparent sid-button__login color-white text-md px-8">Resume</a>
+             */}
+             {loading ? (
+              <span>Loading...</span>
+            ) : resumeUrl ? (
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="d-none d-lg-block bg-transparent sid-button__login color-white text-md px-8"
+              >
+                Resume
+              </a>
+            ) : (
+              <span className="d-none d-lg-block bg-transparent sid-button__login color-white text-md px-8">
+                No Resume Available
+              </span>
+            )}
           </div>
         </div>
-
-        {/* <button onClick={openPopup}>Open Popup</button> */}
-        <PopUp isOpen={isPopupOpen} onClose={closePopup}>
-          <h5 className="text-4xl font-bold color-white">
-            {" "}
-            Log in to continue
-          </h5>
-        </PopUp>
       </Container>
     </motion.nav>
   );

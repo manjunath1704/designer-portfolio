@@ -1,13 +1,13 @@
-[debug] [2024-11-25T19:49:53.372Z] ----------------------------------------------------------------------
-[debug] [2024-11-25T19:49:53.377Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\aravi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2024-11-25T19:49:53.377Z] CLI Version:   13.27.0
-[debug] [2024-11-25T19:49:53.378Z] Platform:      win32
-[debug] [2024-11-25T19:49:53.378Z] Node Version:  v20.10.0
-[debug] [2024-11-25T19:49:53.378Z] Time:          Tue Nov 26 2024 01:19:53 GMT+0530 (India Standard Time)
-[debug] [2024-11-25T19:49:53.378Z] ----------------------------------------------------------------------
+[debug] [2024-11-26T17:23:15.280Z] ----------------------------------------------------------------------
+[debug] [2024-11-26T17:23:15.283Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\aravi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-11-26T17:23:15.283Z] CLI Version:   13.27.0
+[debug] [2024-11-26T17:23:15.283Z] Platform:      win32
+[debug] [2024-11-26T17:23:15.283Z] Node Version:  v20.10.0
+[debug] [2024-11-26T17:23:15.283Z] Time:          Tue Nov 26 2024 22:53:15 GMT+0530 (India Standard Time)
+[debug] [2024-11-26T17:23:15.283Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-11-25T19:49:53.516Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-11-25T19:49:53.517Z] > authorizing via signed-in user (infoofmanju@gmail.com)
+[debug] [2024-11-26T17:23:15.339Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-26T17:23:15.339Z] > authorizing via signed-in user (infoofmanju@gmail.com)
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -30,22 +30,17 @@ Before we get started, keep in mind:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
-[debug] [2024-11-25T19:51:07.898Z] Using project from CLI flag: siddhiparkar-5d475
-[debug] [2024-11-25T19:51:07.899Z] Checked if tokens are valid: true, expires at: 1732567734142
-[debug] [2024-11-25T19:51:07.900Z] Checked if tokens are valid: true, expires at: 1732567734142
-[debug] [2024-11-25T19:51:07.901Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 [none]
-[debug] [2024-11-25T19:51:08.705Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 200
-[debug] [2024-11-25T19:51:08.705Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 {"projectId":"siddhiparkar-5d475","projectNumber":"284369189804","displayName":"siddhiparkar","name":"projects/siddhiparkar-5d475","resources":{"hostingSite":"siddhiparkar-5d475","storageBucket":"siddhiparkar-5d475.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_a6be1405-e3eb-47f3-a6dc-c52065e1c477"}
+[debug] [2024-11-26T17:23:23.107Z] Using project from CLI flag: siddhiparkar-5d475
+[debug] [2024-11-26T17:23:23.108Z] Checked if tokens are valid: true, expires at: 1732643037910
+[debug] [2024-11-26T17:23:23.108Z] Checked if tokens are valid: true, expires at: 1732643037910
+[debug] [2024-11-26T17:23:23.109Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 [none]
+[debug] [2024-11-26T17:23:23.801Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 200
+[debug] [2024-11-26T17:23:23.801Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 {"projectId":"siddhiparkar-5d475","projectNumber":"284369189804","displayName":"siddhiparkar","name":"projects/siddhiparkar-5d475","resources":{"hostingSite":"siddhiparkar-5d475","storageBucket":"siddhiparkar-5d475.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_a6be1405-e3eb-47f3-a6dc-c52065e1c477"}
 [info] i  Using project siddhiparkar-5d475 (siddhiparkar) 
 [info] 
-=== Hosting Setup
-[debug] [2024-11-25T19:51:08.721Z] Checked if tokens are valid: true, expires at: 1732567734142
-[debug] [2024-11-25T19:51:08.721Z] Checked if tokens are valid: true, expires at: 1732567734142
-[debug] [2024-11-25T19:51:08.722Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 [none]
-[debug] [2024-11-25T19:51:09.303Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 200
-[debug] [2024-11-25T19:51:09.303Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 {"projectId":"siddhiparkar-5d475","projectNumber":"284369189804","displayName":"siddhiparkar","name":"projects/siddhiparkar-5d475","resources":{"hostingSite":"siddhiparkar-5d475","storageBucket":"siddhiparkar-5d475.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_a6be1405-e3eb-47f3-a6dc-c52065e1c477"}
+=== Storage Setup
 [info] 
-[info] Your public directory is the folder (relative to your project directory) that
-[info] will contain Hosting assets to be uploaded with firebase deploy. If you
-[info] have a build process for your assets, use your build's output directory.
+[info] Firebase Storage Security Rules allow you to define how and when to allow
+[info] uploads and downloads. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
 [info] 

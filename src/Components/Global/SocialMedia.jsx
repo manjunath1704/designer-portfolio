@@ -17,6 +17,6 @@ const SocialMedia = ({iconSize}) => {
         );
       })}
     </ul>
-  );
+  ); 
 };
 export default SocialMedia;

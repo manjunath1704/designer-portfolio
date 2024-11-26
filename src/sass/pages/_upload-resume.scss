@@ -1,0 +1,74 @@
+.upload-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .drag-drop-area {
+    padding: 30px;
+    border: 2px dashed #6C63FF;
+    border-radius: 8px;
+    // background-color: #F5F5F5;
+    cursor: pointer;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+  
+  .drag-drop-area:hover {
+    background-color: #eef5ff;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: #6C63FF;
+    border-radius: 4px;
+  }
+  
+  .upload-status {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .upload-status.uploading {
+    color: #6C63FF;
+  }
+  
+  .done {
+    color: #28a745;
+  }
+  
+  .resume-list {
+    margin-top: 20px;
+  }
+  
+  .resume-link {
+    color: #6C63FF;
+    text-decoration: none;
+  }
+  
+  .resume-link:hover {
+    text-decoration: underline;
+  }
+  .cursor-pointer{
+    cursor: pointer;
+  }
+.sid-button__outlined{
+    border: 2px solid var(--cms-app-color);
+    background-color: transparent!important;
+    padding: 10px 45px;
+    border-radius: 35px;
+    color: var(--cms-app-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.sid-button__delete{
+    border: 2px solid #EF0107;
+    background-color: transparent!important;
+    border-radius: 35px;
+    color: #EF0107;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}

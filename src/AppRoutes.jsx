@@ -1,10 +1,11 @@
+import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
 } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Home from "./Views/Home";
 import Contact from "./Views/Contact";
 import Login from "./Views/ContentManager/Login";
@@ -21,6 +22,7 @@ import LimitLess from "./Views/ProjectViews/LimitLess";
 import Useralia from "./Views/ProjectViews/Useralia";
 import Genex from "./Views/ProjectViews/Genex";
 import NotFound from "./Views/404";
+import UploadResume from "./Views/UploadResume";
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -51,6 +53,7 @@ const AppRoutes = () => {
         <Route path="/useralia" element={<Useralia />} />
         <Route path="/genex" element={<Genex />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/upload-resume"  element={<UploadResume/>} />
       </Routes>
     </Router>
   );
