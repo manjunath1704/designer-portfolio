@@ -4,8 +4,9 @@ import { ref, uploadBytesResumable, getDownloadURL, listAll, deleteObject } from
 import { v4 as uuidv4 } from "uuid";
 import { FileUploader } from "react-drag-drop-files";
 import { Modal } from "react-bootstrap";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Badge } from "react-bootstrap";
 import { motion } from "framer-motion";
+import LayoutSecondary from "../Components/Layout/LayoutSecondary";
 
 const fileTypes = ["PDF", "DOC", "DOCX"];
 
@@ -98,12 +99,12 @@ function UploadResume() {
   }, []);
 
   return (
-    <>
+    <LayoutSecondary>
       <section className="pt-5 bg-black pb-0">
         <Container>
           <Row className="align-items-center pb-0">
             <Col md={8}>
-              <h1 className="text-4xl text-white pb-5">Resume Manager</h1>
+              <h1 className="text-4xl text-white pb-5 my-8 my-md-0">Resume Manager</h1>
             </Col>
             <Col md={4}>
               <img src="/assets/docs/resume_manager.svg" className="img-fluid" alt="" />
@@ -111,12 +112,11 @@ function UploadResume() {
           </Row>
         </Container>
       </section>
-      <section className="py-5 mt-8">
+      <section className="py-8 mt-8">
         <Container>
           <Row>
             <Col md={4}>
               <div>
-
                 <FileUploader
                   handleChange={handleFileUpload}
                   name="resume"
@@ -130,7 +130,6 @@ function UploadResume() {
                     </div>
                   }
                 />
-
                 {uploadStatus === "uploading" && (
                   <div className="position-relative w-100 rounded mt-5" style={{ height: "8px", backgroundColor: "#F5F5F5" }}>
                     <motion.div
@@ -172,7 +171,7 @@ function UploadResume() {
                 </motion.div>
               </div>
             </Col>
-            <Col md={8}>
+            {/* <Col md={8}>
               <div className="resume-list">
                 {resumeUrls.length > 0 ? <h4 className="text-2xl font-semibold text-black mb-3">Resume History</h4> : ""}
                 {resumeUrls.length > 0 ? (
@@ -190,7 +189,33 @@ function UploadResume() {
                   <p className="text-2xl font-semibold text-black">No resumes uploaded yet.</p>
                 )}
               </div>
-            </Col>
+            </Col> */}
+            <Col md={8}>
+  <div className="resume-list">
+    {resumeUrls.length > 0 ? <h4 className="text-2xl font-semibold text-black mb-3">Resume History</h4> : ""}
+    {resumeUrls.length > 0 ? (
+      resumeUrls.map((file, index) => (
+        <div
+          key={index}
+          className={`resume-item d-flex justify-content-between align-items-center py-6 border-bottom ${
+            index === resumeUrls.length - 1 ? "bg-red-500" : ""
+          }`}
+        >
+          
+          <a href={file.url} target="_blank" rel="noopener noreferrer" className="resume-link">
+            {file.name} {index === resumeUrls.length - 1 ? <Badge bg="danger">I am on Navbar</Badge> : ""}
+          </a>
+          <button onClick={() => handleDeleteClick(file)} className="sid-button__delete text-md px-6 py-2">
+            Delete
+          </button>
+        </div>
+      ))
+    ) : (
+      <p className="text-2xl font-semibold text-black">No resumes uploaded yet.</p>
+    )}
+  </div>
+</Col>
+
           </Row>
         </Container>
       </section>
@@ -207,7 +232,7 @@ function UploadResume() {
           </div>
         </div>
       </Modal>
-    </>
+    </LayoutSecondary>
   );
 }
 

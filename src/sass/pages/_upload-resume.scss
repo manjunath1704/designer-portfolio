@@ -17,7 +17,11 @@
     margin-bottom: 20px;
     height: 300px;
   }
-  
+  @media(max-width:768px){
+    .drag-drop-area {
+      height:auto;
+    }
+  }
   .drag-drop-area:hover {
     background-color: #eef5ff;
   }
