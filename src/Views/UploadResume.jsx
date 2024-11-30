@@ -104,7 +104,7 @@ function UploadResume() {
         <Container>
           <Row className="align-items-center pb-0">
             <Col md={8}>
-              <h1 className="text-4xl text-white pb-5 my-8 my-md-0">Resume Manager</h1>
+              <h1 className="text-4xl text-white pb-5 my-8 my-md-0">Manage Resume</h1>
             </Col>
             <Col md={4}>
               <img src="/assets/docs/resume_manager.svg" className="img-fluid" alt="" />

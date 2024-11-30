@@ -53,7 +53,7 @@ const AppRoutes = () => {
         <Route path="/useralia" element={<Useralia />} />
         <Route path="/genex" element={<Genex />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/upload-resume-9880274931"  element={<UploadResume/>} />
+        <Route path="/manage-resume-9880274931"  element={<UploadResume/>} />
       </Routes>
     </Router>
   );
