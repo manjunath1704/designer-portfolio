@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import AnimatingElement from "../Global/AppearingAnimation";
 import { motion, AnimatePresence } from "framer-motion";
 import LoopingHello from "./LoopingHello";
+import ResumeButton from "../CMS/ResumeButton";
 const Hero = () => {
   const [showHand, setShowHand] = useState(true);
   useEffect(() => {
@@ -29,10 +30,10 @@ const Hero = () => {
               <p className="sid-font__body text-2xl text-lg-4xl font-semibold">
                 UI/UX Designer
               </p>
-              <a href="/assets/docs/siddhi-parkar-resume.pdf" target="_blank" className="mt-5  d-lg-none bg-transparent sid-button__login color-white text-md px-12">Resume</a>
-      
-              {/* <p className='sid-font__body text-xl text-lg-3xl font-regular opacity-50 mt-4'>Freelancer based in Mumbai, India</p> */}
-            </AnimatingElement>
+              <div className="mt-5  d-lg-none">
+                <ResumeButton/>
+              </div>
+              </AnimatingElement>
           </Col>
         </Row>
         <AnimatePresence>

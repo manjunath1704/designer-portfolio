@@ -5,14 +5,13 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import { AuthProvider } from './Components/Auth/AuthContext';
+import ProtectedRoute from './Components/Auth/ProtectedRoute';
 import { useEffect, useState } from "react";
 import Home from "./Views/Home";
 import Contact from "./Views/Contact";
-import Login from "./Views/ContentManager/Login";
 import CreateUiUxProjects from "./Views/ContentManager/UiUx/create";
 import ProjectView from "./Views/ProjectView";
-import CreateProject from "./Views/ContentManager/Projects/Create";
-// import Cfff from "./Views/ContentManager/Projects/Cfff";
 import ProjectDetails from "./Views/ProjectDetails";
 import Edlore from "./Views/ProjectViews/Edlore";
 import MavenSilicon from "./Views/ProjectViews/MavenSIlicon";
@@ -23,6 +22,12 @@ import Useralia from "./Views/ProjectViews/Useralia";
 import Genex from "./Views/ProjectViews/Genex";
 import NotFound from "./Views/404";
 import UploadResume from "./Views/UploadResume";
+import LoginPage from './Views/LoginPage';
+import CreateProject from './Views/CreateProject';
+import ProjectDetail from './Components/CMS/ProjectDetail';
+import ProjectsTable from './Components/CMS/ProjectsTable';
+import ResumeManager from './Components/CMS/ResumeManage';
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -37,14 +42,17 @@ const AppRoutes = () => {
   return (
     <Router>
       <ScrollToTop />
+     {/* <CreatePr/> */}
+   
       <Routes>
+     
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        
         <Route path="/create-uiux-projects" element={<CreateUiUxProjects />} />
         <Route path="/project-view" element={<ProjectView />} />
         <Route path="/project-details/:id" element={<ProjectDetails />} />
-        <Route path="/cms/create-project" element={<CreateProject />} />
+        
         <Route path="/edlore" element={<Edlore />} />
         <Route path="/maven-silicon" element={<MavenSilicon />} />
         <Route path="/email-marketing" element={<EmailMarketing />} />
@@ -54,6 +62,23 @@ const AppRoutes = () => {
         <Route path="/genex" element={<Genex />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/manage-resume-9880274931"  element={<UploadResume/>} />
+        <Route path="/login"  element={<LoginPage/>} />
+        <Route
+            path="/admin/create-project"
+            element={
+              <ProtectedRoute>
+                  <CreateProject/>
+              </ProtectedRoute>
+            }
+          />
+           <Route path="/projects/:title" element={ <ProjectDetail /> } />
+           <Route path="/admin/projects" element={ <ProtectedRoute>
+            <ProjectsTable />
+              </ProtectedRoute> } />
+              <Route path="/admin/manage-resume" element={ <ProtectedRoute>
+                <ResumeManager/>
+              </ProtectedRoute> } />
+              
       </Routes>
     </Router>
   );

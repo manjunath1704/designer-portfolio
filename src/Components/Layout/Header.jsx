@@ -4,46 +4,47 @@ import { Container } from "react-bootstrap";
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
 import { getStorage, ref, listAll, getDownloadURL, getMetadata } from "firebase/storage";
+import ResumeButton from "../CMS/ResumeButton";
 
 const logoDark = "/assets/logo/sid-logo-light-vone.svg";
 
 const Header = () => {
-  const [resumeUrl, setResumeUrl] = useState(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const fetchResume = async () => {
-      try {
-        const storage = getStorage();
-        const resumesRef = ref(storage, "resumes/");
-        const list = await listAll(resumesRef);
+  // const [resumeUrl, setResumeUrl] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   const fetchResume = async () => {
+  //     try {
+  //       const storage = getStorage();
+  //       const resumesRef = ref(storage, "resumes/");
+  //       const list = await listAll(resumesRef);
 
-        if (list.items.length > 0) {
-          const filesWithMetadata = await Promise.all(
-            list.items.map(async (item) => {
-              const metadata = await getMetadata(item);
-              return { item, metadata };
-            })
-          );
+  //       if (list.items.length > 0) {
+  //         const filesWithMetadata = await Promise.all(
+  //           list.items.map(async (item) => {
+  //             const metadata = await getMetadata(item);
+  //             return { item, metadata };
+  //           })
+  //         );
 
-          filesWithMetadata.sort(
-            (a, b) => new Date(b.metadata.timeCreated) - new Date(a.metadata.timeCreated)
-          );
+  //         filesWithMetadata.sort(
+  //           (a, b) => new Date(b.metadata.timeCreated) - new Date(a.metadata.timeCreated)
+  //         );
 
-          const latestFile = filesWithMetadata[0].item;
-          const url = await getDownloadURL(latestFile);
-          setResumeUrl(url);
-        } else {
-          console.log("No files found in Firebase Storage.");
-        }
-      } catch (error) {
-        console.error("Error fetching resume:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  //         const latestFile = filesWithMetadata[0].item;
+  //         const url = await getDownloadURL(latestFile);
+  //         setResumeUrl(url);
+  //       } else {
+  //         console.log("No files found in Firebase Storage.");
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching resume:", error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchResume();
-  }, []);
+  //   fetchResume();
+  // }, []);
 
   // Navbar Animation
   const { scrollY } = useViewportScroll();
@@ -85,7 +86,9 @@ const Header = () => {
           </div>
           <div className="d-flex align-items-center">
             <SocialMedia iconSize="text-4xl" />
-            {loading ? (
+            
+            <div className="d-none d-lg-block"><ResumeButton/></div>
+            {/* {loading ? (
               <span>Loading...</span>
             ) : resumeUrl ? (
               <a
@@ -100,7 +103,7 @@ const Header = () => {
               <span className="d-none d-lg-block bg-transparent sid-button__login color-white text-md px-8">
                 No Resume Available
               </span>
-            )}
+            )} */}
           </div>
         </div>
       </Container>

@@ -1,5 +1,6 @@
 import AppRoutes from "./AppRoutes";
 import { motion } from "framer-motion";
+
 function App() {
   return (
     <motion.div
