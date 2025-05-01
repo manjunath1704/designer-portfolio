@@ -1,16 +1,12 @@
 import AddProjectForm from "../Components/CMS/AddProjectForm";
-import { auth } from "../firebase";
-import { signOut } from 'firebase/auth';
+import AdminHeader from "../Components/Layout/AdminHeader";
 
 const CreateProject = () => {
-    const handleLogout = () => {
-        signOut(auth);
-      };
+
     return(
        <>
-        <h4>Create a Project</h4>
+       <AdminHeader/>
         <AddProjectForm/>
-        <button onClick={handleLogout}>Logout</button>
        </>
     )
 }

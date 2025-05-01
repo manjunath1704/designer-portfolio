@@ -82,8 +82,8 @@ export default function ProjectDetail() {
   if (!project) return <div>Loading...</div>;
 
   return (
-    <Container className="my-4">
-      <h2 className="mb-3">{project.title}</h2>
+    <div className="my-4">
+      {/* <h2 className="mb-3">{project.title}</h2>
 
       <Row className="mb-4">
         <Col>
@@ -98,18 +98,22 @@ export default function ProjectDetail() {
             <Image src={project.thumbnail.mobile} fluid />
           </Col>
         )}
-      </Row>
+      </Row> */}
 
-      <h4>Project Images</h4>
-      <Row xs={1} md={2} lg={3} className="g-4">
+
+      <section className="mb-8">
+      <div className="overflow-hidden">
+      <Row>
         {project.images
           ?.sort((a, b) => a.order - b.order)
           .map((img, index) => (
-            <Col key={index}>
-              <Image src={img.url} thumbnail fluid />
+            <Col xs={12} key={index}>
+              <Image src={img.url} className='w-100' />
             </Col>
           ))}
       </Row>
-    </Container>
+      </div>
+      </section>
+    </div>
   );
 }

@@ -76,3 +76,74 @@
     color: #EF0107;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+.sid-file-uploader label {
+  width: 100%!important;
+}
+
+.custom-rounded-table {
+  border-radius: 12px;
+  overflow: hidden; /* ensures the rounding is visible */
+}
+
+.custom-radius{
+  border-radius: 12px!important;
+}
+
+.log-out-btn{
+  border-radius: 35px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  color: #fff;
+}
+.create-btn{
+  border-radius: 35px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  color: #000;
+}
+.z-infinite{
+  z-index: 9999999999999999999999999!important;
+}
+
+// pagination
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.pagination .page-item {
+  display: inline-block;
+}
+
+.pagination .page-link {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  color: #6B62FF;
+  text-decoration: none;
+  background-color: #fff;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.pagination .page-link:hover {
+  background-color: #f0f0f0;
+  border-color: #6B62FF;
+}
+
+.pagination .active .page-link {
+  background-color: #6B62FF;
+  color: white;
+  border-color: #6B62FF;
+}
+
+.pagination .disabled .page-link {
+  color: #ccc;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.text-color-icon{
+  color: #6B62FF;
+}
