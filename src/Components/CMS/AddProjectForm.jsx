@@ -168,7 +168,8 @@ export default function AddProjectForm() {
                 <Form.Check
                   type="checkbox"
                   id="type-recent"
-                  label="My Recent Creatives"
+                  // label=""
+                  label={<div className="ms-3 mt-1">My Recent Creatives</div>}
                   value="My Recent Creatives"
                   className='mb-3'
                   {...register('type')}
@@ -176,15 +177,17 @@ export default function AddProjectForm() {
                 <Form.Check
                   type="checkbox"
                   id="type-uiux"
-                  label="UI/UX Design Projects"
-                  value="UI/UX Design Projects"
+                  // label="UI/UX Design Projects"
+                  label={<div className="ms-3 mt-1">UI/UX Design Projects</div>}
+                  value=""
                   className='mb-3'
                   {...register('type')}
                 />
                 <Form.Check
                   type="checkbox"
                   id="type-emailers"
-                  label="Emailers and Social Media Marketing"
+                  label={<div className="ms-3 mt-1">Emailers and Social Media Marketing</div>}
+                  // label="Emailers and Social Media Marketing"
                   value="Emailers and Social Media Marketing"
                   {...register('type')}
                 />

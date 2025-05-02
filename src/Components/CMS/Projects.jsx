@@ -1219,17 +1219,31 @@ function Projects() {
 
       {/* Toast */}
       <Toast
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          zIndex: 9999
-        }}
+       bg="success"
+        style={{ position: 'fixed', top: 20, right: 20, zIndex: 99999999999999999 }}
         show={toastMessage.length > 0}
         onClose={() => setToastMessage('')}
+        delay={6000}
+        autohide
       >
-        <Toast.Body>{toastMessage}</Toast.Body>
+        <Toast.Header>
+          <strong className="me-auto text-black">Update Complete</strong>
+        </Toast.Header>
+        <Toast.Body className='text-white'>{toastMessage}</Toast.Body>
       </Toast>
+      {/* <Toast
+        bg="success"
+        onClose={() => setShowToast(false)}
+        show={showToast}
+        delay={6000}
+        autohide
+        style={{ position: 'fixed', top: 20, right: 20, zIndex: 99999999999999999 }}
+      >
+        <Toast.Header>
+          <strong className="me-auto text-black">Upload Complete</strong>
+        </Toast.Header>
+        <Toast.Body className='text-white'>Project uploaded successfully!</Toast.Body>
+      </Toast> */}
     </LayoutAdmin>
   );
 }
