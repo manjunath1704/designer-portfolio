@@ -25,7 +25,7 @@ export default function AddProjectForm() {
     formState: { isSubmitting },
   } = useForm({
     defaultValues: {
-      type: '',
+      type: [],
       title: '',
       thumbnail: {
         desktop: null,
@@ -162,15 +162,35 @@ export default function AddProjectForm() {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Row className='g-4'>
           <Col md={6}>
-            <Form.Group >
-              <Form.Label className='text-lg font-semibold'>Project Type</Form.Label>
-              <Form.Select {...register('type', { required: true })}>
-                <option value="">Select type</option>
-                <option value="My Recent Creatives">My Recent Creatives</option>
-                <option value="UI/UX Design Projects">UI/UX Design Projects</option>
-                <option value="Emailers and Social Media Marketing">Emailers and Social Media Marketing</option>
-              </Form.Select>
-            </Form.Group>
+            <Form.Group>
+  <Form.Label className="text-lg font-semibold">Project Type</Form.Label>
+  <div className="d-flex flex-column">
+    <Form.Check
+      type="checkbox"
+      id="type-recent"
+      label="My Recent Creatives"
+      value="My Recent Creatives"
+      className='mb-3'
+      {...register('type')}
+    />
+    <Form.Check
+      type="checkbox"
+      id="type-uiux"
+      label="UI/UX Design Projects"
+      value="UI/UX Design Projects"
+      className='mb-3'
+      {...register('type')}
+    />
+    <Form.Check
+      type="checkbox"
+      id="type-emailers"
+      label="Emailers and Social Media Marketing"
+      value="Emailers and Social Media Marketing"
+      {...register('type')}
+    />
+  </div>
+</Form.Group>
+
           </Col>
           <Col md={6}>
             <Form.Group>

@@ -25,6 +25,7 @@ import {
 import { FileUploader } from 'react-drag-drop-files';
 import { motion, AnimatePresence } from 'framer-motion';
 import AdminHeader from '../Layout/AdminHeader';
+import { Trash } from 'react-bootstrap-icons';
 
 export default function ResumeManager() {
   const [resumes, setResumes] = useState([]);
@@ -134,13 +135,11 @@ export default function ResumeManager() {
                   </a></div>
                 </td>
                 <td>
-                  <div className="p-3"> <Button
-                    size="sm"
-                    variant="danger"
+                  <div className="p-3 ms-3"> <button className='d-inline-block bg-transparent'
                     onClick={() => setDeleteTarget(resume)}
                   >
-                    <i className="bi bi-trash me-1"></i> Delete
-                  </Button></div>
+                    <Trash className='text-danger text-xl'/>
+                  </button></div>
                 </td>
               </tr>
             ))}
