@@ -1,13 +1,12 @@
 import AddProjectForm from "../Components/CMS/AddProjectForm";
-import AdminHeader from "../Components/Layout/AdminHeader";
+import LayoutAdmin from "../Components/Layout/LayoutAdmin";
 
 const CreateProject = () => {
 
     return(
-       <>
-       <AdminHeader/>
+       <LayoutAdmin>
         <AddProjectForm/>
-       </>
+       </LayoutAdmin>
     )
 }
 export default CreateProject;

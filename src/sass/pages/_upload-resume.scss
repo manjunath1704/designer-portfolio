@@ -147,3 +147,41 @@
 .text-color-icon{
   color: #6B62FF;
 }
+
+.glitter-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 3rem;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.glitter-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-size: 10px 10px;
+  animation: glitter 2s linear infinite;
+}
+
+@keyframes glitter {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
+}
+
+.border-radius-35{
+  border-radius: 35px!important;
+}

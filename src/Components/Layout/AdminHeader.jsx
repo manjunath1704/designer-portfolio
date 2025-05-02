@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, useViewportScroll } from "framer-motion";
 import { Container } from "react-bootstrap";
 import SocialMedia from "../Global/SocialMedia";
-import { Link } from "react-router-dom";
+import { Link ,useLocation} from "react-router-dom";
 import LogoutButton from "../CMS/LogoutButton";
 const logoDark = "/assets/logo/sid-logo-light-vone.svg";
 
@@ -26,6 +26,10 @@ const AdminHeader = () => {
     hidden: { opacity: 0, y: -80 },
   };
 
+  const { pathname } = useLocation();
+  const isProjectActive =
+  pathname === "/admin/create-project" || pathname === "/admin/projects";
+const isResumeActive = pathname === "/admin/manage-resume";
   return (
     <motion.nav
       variants={variants}
@@ -44,8 +48,13 @@ const AdminHeader = () => {
               {" "}
             </Link>
           </div>
-          <div className="d-flex align-items-center">
-            
+          <div className="d-flex align-items-center gap-4">
+             <Link to="/admin/projects" className={`bg-transparent sid-button__login color-white text-md px-12 ${
+          isProjectActive ? "glitter-button" : ""
+        }`}>Projects</Link>
+             <Link to="/admin/manage-resume" className={`bg-transparent sid-button__login color-white text-md px-12 ${
+          isResumeActive ? "glitter-button" : ""
+        }`}>Resumes</Link>
             <LogoutButton/>
           </div>
         </div>
