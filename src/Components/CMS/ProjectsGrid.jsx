@@ -17,7 +17,7 @@ export default function ProjectsGrid() {
 
     fetchProjects();
   }, []);
-
+console.log(projects,'projects')
   return (
     <Container className="my-5">
         <h1>hello</h1>
