@@ -8,6 +8,7 @@ const Card = ({
   projectLink,
   titleColor,
   delay,
+  description
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -45,7 +46,7 @@ const Card = ({
         </figure>
         <footer>
           <h4 className={`text-lg sid-font__body mt-4 ${titleColor}`}>
-            {projectTitle}
+            {projectTitle} - {description}
           </h4>
         </footer>
       </article>

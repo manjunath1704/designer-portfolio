@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import SocialMedia from "../Global/SocialMedia";
 import { Link } from "react-router-dom";
 import { getStorage, ref, listAll, getDownloadURL, getMetadata } from "firebase/storage";
+import ResumeButton from "../CMS/ResumeButton";
 const logoDark = "/assets/logo/sid-logo-dark-vone.svg";
 const HeaderSecondary = () => {
 //  start
@@ -94,22 +95,7 @@ useEffect(() => {
             <SocialMedia iconSize="text-4xl text-dark" />
             {/* <a href="/assets/docs/siddhi-parkar-resume.pdf" target="_blank" className="d-inline-block bg-transparent sid-button__login color-white text-md px-8">Resume</a>
              */}
-             {loading ? (
-              <span>Loading...</span>
-            ) : resumeUrl ? (
-              <a
-                href={resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="d-none d-lg-block bg-transparent sid-button__login color-white text-md px-8"
-              >
-                Resume
-              </a>
-            ) : (
-              <span className="d-none d-lg-block bg-transparent sid-button__login color-white text-md px-8">
-                No Resume Available
-              </span>
-            )}
+             <ResumeButton/>
           </div>
         </div>
       </Container>

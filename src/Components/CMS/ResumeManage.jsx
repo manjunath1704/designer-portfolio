@@ -26,7 +26,7 @@ import { FileUploader } from 'react-drag-drop-files';
 import { motion, AnimatePresence } from 'framer-motion';
 import AdminHeader from '../Layout/AdminHeader';
 import { Trash } from 'react-bootstrap-icons';
-
+import LayoutAdmin from '../Layout/LayoutAdmin';
 export default function ResumeManager() {
   const [resumes, setResumes] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
@@ -89,8 +89,14 @@ export default function ResumeManager() {
 
   return (
     <>
-      <AdminHeader />
-      <Container className="mt-20 pt-10">
+      <LayoutAdmin>
+    <motion.div 
+     initial={{ opacity: 0, scale: 0.95 }}
+     animate={{ opacity: 1, scale: 1 }}
+     exit={{ opacity: 0, scale: 0.95 }}
+     transition={{ duration: 0.5, ease: 'easeOut' }}
+    >
+    <Container className="mt-20 pt-10">
         <h3 className='text-4xl font-bold mb-5'>Manage resume</h3>
         <Row className='flex justify-content-center mb-5'>
           <Col xs={12} md={12}>
@@ -192,6 +198,8 @@ export default function ResumeManager() {
           )}
         </AnimatePresence>
       </Container>
+    </motion.div>
+      </LayoutAdmin>
     </>
   );
 }

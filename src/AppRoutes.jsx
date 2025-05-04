@@ -26,6 +26,7 @@ import CreateProject from './Views/CreateProject';
 import ProjectDetail from './Components/CMS/ProjectDetail';
 import ResumeManager from './Components/CMS/ResumeManage';
 import Projects from './Components/CMS/Projects';
+import HomeNew from './Views/HomeNew';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -60,6 +61,7 @@ const AppRoutes = () => {
         <Route path="/manage-resume-9880274931" element={<UploadResume />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/projects/:title" element={<ProjectDetail />} />
+        <Route path="/home-new" element={ <HomeNew/>} />
         { /* Public routes : End */}
 
         {/* Protected routes : Start */}
@@ -74,7 +76,7 @@ const AppRoutes = () => {
           <Projects/>
         </ProtectedRoute>} />
         {/* Protected routes : end */}
-       
+      
       </Routes>
     </Router>
   );

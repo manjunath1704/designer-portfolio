@@ -1,43 +1,13 @@
+//EmailersSocialMediaMarketing
+
 import React from "react";
-import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
-import db from "../../firebase";
-import { collection, getDocs  } from "firebase/firestore";
 
-const projectData = [
-  // {
-  //   projectTitle: "Redington - Email marketing",
-  //   projectThumbnail:"/assets/thumbnails/emailers/emailer-xs.webp",
-  //   projectLink: "/email-marketing",
-  // },
-  {
-    projectTitle: "Useralia - Social media marketing",
-    projectThumbnail:"/assets/thumbnails/emailers/useralia-social-media.webp",
-    projectLink: "/social-media",
-  }
-];
-const MarketingStuff = () => {
-  const [projects, setProjects] = useState([]);
-  const projectsCollectionRef = collection(db,"projects")
-  useEffect(()=>{
-    const getProjectList = async () => {
-      try{
-        const data = await getDocs(projectsCollectionRef);
-        const filteredData = data.docs.map((doc) => ({...doc.data(), id:doc.id,}))
-        setProjects(filteredData)
-      } catch(err){
-        console.error(err)
-      }
-    }
-    getProjectList();
-  }, []);
-  console.log(projects, "projects");
+const EmailersSocialMediaMarketing = ({ projects }) => {
   return (
-    <>
-
     <section className="sid-section sid-marketingStuff overflow-hidden position-relative">
-      <div className="sid-marketingStuff__shape">
+     <div className="sid-marketingStuff__shape">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-30 0.9927821159362793 1337 2867.00732421875"
@@ -54,20 +24,21 @@ const MarketingStuff = () => {
       <Container>
         <Row className="mb-8 position-relative z-5">
           <Col xs={12}>
-            <h5 className="color-black text-4xl text-lg-8xl sid-font__head text-center mb-5">
+          <h5 className="color-black text-4xl text-lg-8xl sid-font__head text-center mb-5">
             Emailers and Social media Marketing
             </h5>
           </Col>
         </Row>
         <Row className="g-4">
-          {projectData.map((data, index) => {
+          {projects.map((data, index) => {
+            const projectSlug = data.title.toLowerCase().split(' ').join('-');
             return (
-              <Col xs={12} sm={6} lg={4} key={index}>
-               <Card
-                  titleColor="color-black"
-                  projectThumbnail={data.projectThumbnail}
-                  projectTitle={data && data.projectTitle}
-                  projectLink={data.projectLink}
+              <Col xs={12} sm={6} lg={4} key={data.id}>
+                <Card
+                  titleColor="color-white"
+                  projectThumbnail={data.thumbnail?.desktop || data.thumbnail?.mobile}
+                  projectTitle={data.title}
+                  projectLink={`/projects/${projectSlug}`}
                   delay={0.6 * index}
                 />
               </Col>
@@ -76,7 +47,7 @@ const MarketingStuff = () => {
         </Row>
       </Container>
     </section>
-    </>
   );
 };
-export default MarketingStuff;
+
+export default EmailersSocialMediaMarketing;

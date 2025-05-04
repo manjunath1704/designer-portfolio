@@ -1,4 +1,3 @@
-import ProjectsGrid from "../Components/CMS/ProjectsGrid";
 import Hero from "../Components/Home/Hero";
 import MarketingStuff from "../Components/Home/MarketingStuff";
 import Projects from "../Components/Home/Projects";
@@ -14,7 +13,6 @@ const Home = () => {
       <UiUxProjects />
       <MarketingStuff />
       <Services />
-      <ProjectsGrid/>
     </Layout>
   );
 };
