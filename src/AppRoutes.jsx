@@ -8,7 +8,7 @@ import {
 import { AuthProvider } from './Components/Auth/AuthContext';
 import ProtectedRoute from './Components/Auth/ProtectedRoute';
 import { useEffect, useState } from "react";
-import Home from "./Views/Home";
+// import Home from "./Views/Home";
 import Contact from "./Views/Contact";
 import ProjectView from "./Views/ProjectView";
 import ProjectDetails from "./Views/ProjectDetails";
@@ -47,7 +47,7 @@ const AppRoutes = () => {
 
       <Routes>
         { /* Public routes : Start */}
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/project-view" element={<ProjectView />} />
         <Route path="/project-details/:id" element={<ProjectDetails />} />
@@ -62,7 +62,7 @@ const AppRoutes = () => {
         <Route path="/manage-resume-9880274931" element={<UploadResume />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/projects/:title" element={<ProjectDetail />} />
-        <Route path="/home-new" element={ <HomeNew/>} />
+        <Route path="/" element={ <HomeNew/>} />
         { /* Public routes : End */}
 
         {/* Protected routes : Start */}

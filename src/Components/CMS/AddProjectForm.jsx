@@ -433,7 +433,7 @@ export default function AddProjectForm() {
             <Col md={12}>
               <div className="d-flex gap-2 mb-8">
                 <button variant="success" className='create-btn bg-success text-white px-8 py-3' type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? 'Uploading...' : 'Create Project'}
+                  {isSubmitting ? 'Creating Project...' : 'Create Project'}
                 </button>
               </div>
             </Col>
@@ -442,6 +442,7 @@ export default function AddProjectForm() {
 
         <Toast
           bg="success"
+          className='z-infinite'
           onClose={() => setShowToast(false)}
           show={showToast}
           delay={6000}

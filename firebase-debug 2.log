@@ -1,0 +1,59 @@
+[debug] [2025-05-05T04:27:02.772Z] ----------------------------------------------------------------------
+[debug] [2025-05-05T04:27:02.773Z] Command:       /usr/local/bin/node /Users/manjunathkottarki/.npm-global/bin/firebase init
+[debug] [2025-05-05T04:27:02.773Z] CLI Version:   14.2.1
+[debug] [2025-05-05T04:27:02.773Z] Platform:      darwin
+[debug] [2025-05-05T04:27:02.773Z] Node Version:  v22.14.0
+[debug] [2025-05-05T04:27:02.773Z] Time:          Mon May 05 2025 09:57:02 GMT+0530 (India Standard Time)
+[debug] [2025-05-05T04:27:02.773Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-05T04:27:02.774Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-05-05T04:27:02.861Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-05T04:27:02.861Z] > authorizing via signed-in user (infoofmanju@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/manjunathkottarki/Documents/GitHub/designer-portfolio
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2025-05-05T04:27:03.576Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-05-05T04:27:03.577Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-05-05T04:27:28.715Z] Using project from CLI flag: siddhiparkar-5d475
+[debug] [2025-05-05T04:27:28.716Z] Checked if tokens are valid: false, expires at: 1745857795633
+[debug] [2025-05-05T04:27:28.716Z] Checked if tokens are valid: false, expires at: 1745857795633
+[debug] [2025-05-05T04:27:28.716Z] > refreshing access token with scopes: []
+[debug] [2025-05-05T04:27:28.717Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-05T04:27:28.717Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-05T04:27:29.069Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-05T04:27:29.070Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-05T04:27:29.082Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 [none]
+[debug] [2025-05-05T04:27:29.870Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 200
+[debug] [2025-05-05T04:27:29.870Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 {"projectId":"siddhiparkar-5d475","projectNumber":"284369189804","displayName":"siddhiparkar","name":"projects/siddhiparkar-5d475","resources":{"hostingSite":"siddhiparkar-5d475","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_a6be1405-e3eb-47f3-a6dc-c52065e1c477"}
+[info] i  Using project siddhiparkar-5d475 (siddhiparkar) 
+[info] 
+=== Hosting Setup
+[debug] [2025-05-05T04:27:29.880Z] Checked if tokens are valid: true, expires at: 1746422848070
+[debug] [2025-05-05T04:27:29.880Z] Checked if tokens are valid: true, expires at: 1746422848070
+[debug] [2025-05-05T04:27:29.880Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 [none]
+[debug] [2025-05-05T04:27:30.229Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 200
+[debug] [2025-05-05T04:27:30.229Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/siddhiparkar-5d475 {"projectId":"siddhiparkar-5d475","projectNumber":"284369189804","displayName":"siddhiparkar","name":"projects/siddhiparkar-5d475","resources":{"hostingSite":"siddhiparkar-5d475","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_a6be1405-e3eb-47f3-a6dc-c52065e1c477"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

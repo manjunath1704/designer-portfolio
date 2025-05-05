@@ -434,7 +434,7 @@ function Projects() {
      
 
       {/* Edit Modal */}
-      <Modal size='xl' className='z-infinite' show={showEditModal} onHide={() => setShowEditModal(false)} centered>
+      <Modal size='xl' className='z-infinite'  style={{ zIndex: 99999999999999999 }} show={showEditModal} onHide={() => setShowEditModal(false)} centered>
         <div className="d-flex justify-content-between align-items-center px-10 pt-10 pb-6">
             <h3 className='text-4xl font-bold'>Edit <span className='resume-link font-normal'>{editForm.title}</span></h3>
             <Button  variant="danger"
@@ -446,7 +446,7 @@ function Projects() {
                           }}  onClick={() => setShowEditModal(false)}><XLg className="text-xl text-white" /></Button>
           
         </div>
-        <Modal.Body className='px-10'>
+        <Modal.Body className='px-10 z-infinite'>
           <Form>
             <Row className='g-5'>
               <Col md={6}>

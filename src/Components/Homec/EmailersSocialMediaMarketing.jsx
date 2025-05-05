@@ -91,10 +91,10 @@ const EmailersSocialMediaMarketing = ({ projects }) => {
 
   return (
     <motion.section
-      ref={sectionRef}
-      variants={sectionVariants}
-      initial="hidden"
-      animate={controls}
+      // ref={sectionRef}
+      // variants={sectionVariants}
+      // initial="hidden"
+      // animate={controls}
       className="sid-section sid-marketingStuff overflow-hidden position-relative"
     >
       <div className="sid-marketingStuff__shape">
@@ -124,14 +124,15 @@ const EmailersSocialMediaMarketing = ({ projects }) => {
             const projectSlug = data.title.toLowerCase().split(" ").join("-");
             return (
               <Col xs={12} sm={6} lg={4} key={data.id}>
-                <motion.div variants={cardVariants}>
-                  <Card
+                {/* <motion.div variants={cardVariants}>
+                 
+                </motion.div> */}
+                 <Card
                     titleColor="color-white"
                     projectThumbnail={data.thumbnail?.desktop || data.thumbnail?.mobile}
                     projectTitle={data.title}
                     projectLink={`/projects/${projectSlug}`}
                   />
-                </motion.div>
               </Col>
             );
           })}
