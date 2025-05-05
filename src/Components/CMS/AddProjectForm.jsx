@@ -181,7 +181,7 @@ export default function AddProjectForm() {
                     type="checkbox"
                     id="type-uiux"
                     label={<div className="ms-3 mt-1">UI/UX Design Projects</div>}
-                    value=""
+                    value="UI/UX Design Projects"
                     className='mb-3'
                     {...register('type')}
                   />
