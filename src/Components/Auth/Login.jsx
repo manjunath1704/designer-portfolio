@@ -31,7 +31,7 @@ function Login() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/admin/create-project');
+      navigate('/admin/projects');
     } catch (error) {
       const errorCode = error.code;
       const newErrors = {};

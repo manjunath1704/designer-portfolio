@@ -1,10 +1,43 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "../Global/Card";
-
+import { motion, useAnimation, useInView } from "framer-motion";
 const UiUxProjects = ({ projects }) => {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+    const controls = useAnimation();
+      useEffect(() => {
+        if (isInView) {
+          controls.start("visible");
+        }
+      }, [isInView, controls]);
+    
+      const sectionVariants = {
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: 0.2, // delay between each card
+          },
+        },
+      };
+    
+      const cardVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.6,
+            ease: "easeOut",
+          },
+        },
+      };
   return (
-    <section className="sid-section sid-UiUxProjects position-relative overflow-hidden">
+   <motion.section
+         ref={sectionRef}
+         variants={sectionVariants}
+         initial="hidden"
+         animate={controls} className="sid-section sid-UiUxProjects position-relative overflow-hidden">
       <div className="sid-UiUxProjects__shape">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +65,7 @@ const UiUxProjects = ({ projects }) => {
             const projectSlug = data.title.toLowerCase().split(' ').join('-');
             return (
               <Col xs={12} sm={6} lg={4} key={data.id}>
+                <motion.div variants={cardVariants}>
                 <Card
                   titleColor="color-white"
                   projectThumbnail={data.thumbnail?.desktop || data.thumbnail?.mobile}
@@ -40,12 +74,14 @@ const UiUxProjects = ({ projects }) => {
                   projectLink={`/projects/${projectSlug}`}
                   delay={0.6 * index}
                 />
+                </motion.div>
               </Col>
+              
             );
           })}
         </Row>
       </Container>
-    </section>
+    </motion.section>
   );
 };
 

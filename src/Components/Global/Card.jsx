@@ -10,28 +10,28 @@ const Card = ({
   delay,
   description
 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  // const ref = useRef(null);
+  // const isInView = useInView(ref, { once: true });
 
-  const cardVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        delay,
-        type: "spring", stiffness: 100
-      },
+  // const cardVariants = {
+  //   hidden: { opacity: 0 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       duration: 0.5,
+  //       delay,
+  //       type: "spring", stiffness: 100
+  //     },
      
-    },
-  };
+  //   },
+  // };
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={cardVariants}
+    <div
+      // ref={ref}
+      // initial="hidden"
+      // animate={isInView ? "visible" : "hidden"}
+      // variants={cardVariants}
       className="sid-card__link position-relative"
       href={projectLink}
     >
@@ -51,7 +51,7 @@ const Card = ({
         </footer>
       </article>
     </Link>
-    </motion.div>
+    </div>
   );
 };
 export default Card;

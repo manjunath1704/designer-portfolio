@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import SocialMedia from "../Global/SocialMedia";
 import { Link ,useLocation} from "react-router-dom";
 import LogoutButton from "../CMS/LogoutButton";
+import { Download, FileEarmarkText, FileEarmarkTextFill, Window } from "react-bootstrap-icons";
 const logoDark = "/assets/logo/sid-logo-light-vone.svg";
 
 const AdminHeader = () => {
@@ -49,12 +50,12 @@ const isResumeActive = pathname === "/admin/manage-resume";
             </Link>
           </div>
           <div className="d-flex align-items-center gap-4">
-             <Link to="/admin/projects" className={`bg-transparent sid-button__login color-white text-md px-12 ${
+             <Link to="/admin/projects" className={`bg-transparent sid-button__login color-white text-md px-5 px-md-12 ${
           isProjectActive ? "glitter-button" : ""
-        }`}>Projects</Link>
-             <Link to="/admin/manage-resume" className={`bg-transparent sid-button__login color-white text-md px-12 ${
+        }`}> <span className="d-none d-md-block">Projects</span> <Window className="text-2xl d-block d-md-none" /></Link>
+             <Link to="/admin/manage-resume" className={`bg-transparent sid-button__login color-white text-md px-5 px-md-12 ${
           isResumeActive ? "glitter-button" : ""
-        }`}>Resumes</Link>
+        }`}> <span className="d-none d-md-block">Resumes</span><FileEarmarkText className="text-2xl d-block d-md-none" /> </Link>
             <LogoutButton/>
           </div>
         </div>

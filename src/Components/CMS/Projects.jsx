@@ -350,9 +350,9 @@ function Projects() {
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}>
  <Container className="my-20 pt-20 ">
-        <div className="d-flex justify-content-between align-items-center mb-5">
+        <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5">
           <h3 className='text-4xl font-bold'>Manage projects</h3>
-          <Link to="/admin/create-project" className='create-btn bg-success text-white px-8 py-3'><Plus className='text-3xl' />Create project</Link>
+          <Link to="/admin/create-project" className='create-btn bg-success text-white px-8 py-3 text-center'><Plus className='text-3xl' />Create project</Link>
         </div>
         <Row className='mb-4'>
           <Col md={7}>
@@ -511,7 +511,7 @@ function Projects() {
                   />
                 </Form.Group>
               </Col>
-              <Col md={6}>
+              <Col md={4}>
                 <Form.Group controlId="thumbnailDesktop">
                   <Form.Label className="text-lg font-semibold">Desktop Thumbnail</Form.Label>
                   {editForm.thumbnail?.desktop && (
@@ -529,7 +529,7 @@ function Projects() {
                 </Form.Group>
               </Col>
 
-              <Col md={6}>
+              <Col md={4}>
                 <Form.Group controlId="thumbnailMobile">
                   <Form.Label className="text-lg font-semibold">Mobile Thumbnail (optional)</Form.Label>
                   {editForm.thumbnail?.mobile && (
@@ -545,7 +545,7 @@ function Projects() {
                   {renderFileInput('thumbnail', 'mobile')}
                 </Form.Group>
               </Col>
-              <Col md={6}>
+              <Col md={4}>
                 <Form.Group controlId="thumbnailAlternate">
                   <Form.Label className="text-lg font-semibold">Alternate Thumbnail (optional)</Form.Label>
                   {editForm.thumbnail?.alternate && (
@@ -662,20 +662,31 @@ function Projects() {
 
       {/* Delete Modal */}
       <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)} centered>
-        <Modal.Header closeButton>
+        {/* <Modal.Header closeButton>
           <Modal.Title>Delete Project</Modal.Title>
-        </Modal.Header>
+        </Modal.Header> */}
+          <div className="d-flex justify-content-between align-items-center p-4">
+            <h3 className='text-xl font-bold'>Delete Project</h3>
+            <Button  variant="danger"
+                          size="sm"
+                          style={{
+                            height: '40px',
+                            width: '40px',
+                            borderRadius: "50%"
+                          }}  onClick={() => setShowDeleteModal(false)}><XLg className="text-xl text-white" /></Button>
+          
+        </div>
         <Modal.Body>
-          <p>Are you sure you want todelete this project?</p>
+          <p className='text-lg'>Are you sure you want to delete this project?</p>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowDeleteModal(false)}>
+       <div className='p-5 text-end'> 
+          <Button variant="secondary" className='create-btn text-white px-8 py-3 me-3' onClick={() => setShowDeleteModal(false)}>
             Cancel
           </Button>
-          <Button variant="danger" onClick={handleDeleteProject}>
-            Delete
+          <Button variant="primary" className='create-btn bg-danger text-white px-8 py-3' onClick={handleDeleteProject}>
+          Delete
           </Button>
-        </Modal.Footer>
+       </div>
       </Modal>
 
       {/* Toast */}

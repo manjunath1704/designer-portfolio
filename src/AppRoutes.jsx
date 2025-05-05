@@ -27,6 +27,7 @@ import ProjectDetail from './Components/CMS/ProjectDetail';
 import ResumeManager from './Components/CMS/ResumeManage';
 import Projects from './Components/CMS/Projects';
 import HomeNew from './Views/HomeNew';
+import JokePage from './Components/CMS/JokesPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -75,6 +76,10 @@ const AppRoutes = () => {
         <Route path="/admin/projects" element={<ProtectedRoute>
           <Projects/>
         </ProtectedRoute>} />
+        <Route path="/admin/jokes" element={<ProtectedRoute>
+          <JokePage/>
+        </ProtectedRoute>} />
+        
         {/* Protected routes : end */}
       
       </Routes>
