@@ -58,7 +58,7 @@ function Login() {
                 <h2 className="text-center mb-4">Login</h2>
                 <Form noValidate>
                   <Form.Group className="mb-4" controlId="formEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label>Email</Form.Label>
                     <Form.Control
                       type="email"
                       placeholder="Enter email"
