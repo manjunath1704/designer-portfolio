@@ -20,7 +20,7 @@ import LimitLess from "./Views/ProjectViews/LimitLess";
 import Useralia from "./Views/ProjectViews/Useralia";
 import Genex from "./Views/ProjectViews/Genex";
 import NotFound from "./Views/404";
-import UploadResume from "./Views/UploadResume";
+// import UploadResume from "./Views/UploadResume";
 import LoginPage from './Views/LoginPage';
 import CreateProject from './Views/CreateProject';
 import ProjectDetail from './Components/CMS/ProjectDetail';
@@ -59,7 +59,7 @@ const AppRoutes = () => {
         <Route path="/useralia" element={<Useralia />} />
         <Route path="/genex" element={<Genex />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/manage-resume-9880274931" element={<UploadResume />} />
+        {/* <Route path="/manage-resume-9880274931" element={<UploadResume />} /> */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/projects/:title" element={<ProjectDetail />} />
         <Route path="/" element={ <HomeNew/>} />
